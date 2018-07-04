@@ -18,27 +18,31 @@ class ViewController_MainMenu: UIViewController {
     
     
     // Variables
+    let BOARDER_WIDTH  = CGFloat(1)
+    let BOARDER_COLOR = UIColor.red.cgColor
+    let CORNER_RADIUS = CGFloat(30)
+    let BACKGROUND_COLOR = UIColor.red.cgColor
     
     // Func
     
     override func viewDidLoad() {
-        self.title = "APPNAME"
+        self.title = "Main Menu" // Update
         
         // Update button look
-        btn_Map.layer.borderWidth = 1  // Update
-        btn_Map.layer.borderColor = UIColor.red.cgColor  // Update
-        btn_Map.layer.cornerRadius = 10  // Update
-        btn_Map.layer.backgroundColor = UIColor.red.cgColor
+        btn_Map.layer.borderWidth = BOARDER_WIDTH
+        btn_Map.layer.borderColor = BOARDER_COLOR
+        btn_Map.layer.cornerRadius = CORNER_RADIUS
+        btn_Map.layer.backgroundColor = BACKGROUND_COLOR
         
-        btn_AboutSG.layer.borderWidth = 1  // Update
-        btn_AboutSG.layer.borderColor = UIColor.red.cgColor  // Update
-        btn_AboutSG.layer.cornerRadius = 10  // Update
-        btn_AboutSG.layer.backgroundColor = UIColor.red.cgColor
+        btn_AboutSG.layer.borderWidth = BOARDER_WIDTH
+        btn_AboutSG.layer.borderColor = BOARDER_COLOR
+        btn_AboutSG.layer.cornerRadius = CORNER_RADIUS
+        btn_AboutSG.layer.backgroundColor = BACKGROUND_COLOR
         
-        btn_Credits.layer.borderWidth = 1  // Update
-        btn_Credits.layer.borderColor = UIColor.red.cgColor  // Update
-        btn_Credits.layer.cornerRadius = 10  // Update
-        btn_Credits.layer.backgroundColor = UIColor.red.cgColor
+        btn_Credits.layer.borderWidth = BOARDER_WIDTH
+        btn_Credits.layer.borderColor = BOARDER_COLOR
+        btn_Credits.layer.cornerRadius = CORNER_RADIUS
+        btn_Credits.layer.backgroundColor = BACKGROUND_COLOR
         
         
         super.viewDidLoad()
