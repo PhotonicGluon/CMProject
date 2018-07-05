@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2202E8B220EDD2FA0040FFBF /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 2202E8B120EDD2FA0040FFBF /* Images */; };
+		2202E8B420EDD3120040FFBF /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 2202E8B320EDD3110040FFBF /* Images */; };
 		2224242620E8770F00AC5FB1 /* CMProject-MainPageBackgrond.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2224242520E8770F00AC5FB1 /* CMProject-MainPageBackgrond.jpg */; };
 		2227627F20E49BF00043320A /* ViewController_MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227627D20E49BF00043320A /* ViewController_MainMenu.swift */; };
 		2227628020E49BF00043320A /* ViewController_Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227627E20E49BF00043320A /* ViewController_Map.swift */; };
@@ -17,7 +19,6 @@
 		22FDC0B020E2799200258319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22FDC0AF20E2799200258319 /* Assets.xcassets */; };
 		22FDC0B320E2799200258319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FDC0B120E2799200258319 /* LaunchScreen.storyboard */; };
 		E5A1580620EC559000D5FA9E /* Screen Shot 2018-06-27 at 9.17.33 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A1580520EC559000D5FA9E /* Screen Shot 2018-06-27 at 9.17.33 AM.png */; };
-		E5A1580820EC569A00D5FA9E /* Screen Shot 2018-06-27 at 9.17.33 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A1580720EC569A00D5FA9E /* Screen Shot 2018-06-27 at 9.17.33 AM.png */; };
 		E5A1580A20EC56C000D5FA9E /* 5437098-wallpaper-singapore.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E5A1580920EC56C000D5FA9E /* 5437098-wallpaper-singapore.jpg */; };
 		E5A1580E20EC578A00D5FA9E /* cooltext291931175042605.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A1580B20EC578900D5FA9E /* cooltext291931175042605.png */; };
 		E5A1580F20EC578A00D5FA9E /* cooltext291931134825283.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A1580C20EC578900D5FA9E /* cooltext291931134825283.png */; };
@@ -25,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2202E8B020EDD2EE0040FFBF /* Screen Shot 2018-06-27 at 9.17.33 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2018-06-27 at 9.17.33 AM.png"; path = "../../../../Downloads/Screen Shot 2018-06-27 at 9.17.33 AM.png"; sourceTree = "<group>"; };
+		2202E8B120EDD2FA0040FFBF /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; sourceTree = "<group>"; };
+		2202E8B320EDD3110040FFBF /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; sourceTree = "<group>"; };
 		2224242520E8770F00AC5FB1 /* CMProject-MainPageBackgrond.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "CMProject-MainPageBackgrond.jpg"; sourceTree = "<group>"; };
 		2227627D20E49BF00043320A /* ViewController_MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_MainMenu.swift; sourceTree = "<group>"; };
 		2227627E20E49BF00043320A /* ViewController_Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Map.swift; sourceTree = "<group>"; };
@@ -37,7 +41,6 @@
 		22FDC0B220E2799200258319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22FDC0B420E2799200258319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5A1580520EC559000D5FA9E /* Screen Shot 2018-06-27 at 9.17.33 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2018-06-27 at 9.17.33 AM.png"; sourceTree = "<group>"; };
-		E5A1580720EC569A00D5FA9E /* Screen Shot 2018-06-27 at 9.17.33 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2018-06-27 at 9.17.33 AM.png"; path = "../../Downloads/Screen Shot 2018-06-27 at 9.17.33 AM.png"; sourceTree = "<group>"; };
 		E5A1580920EC56C000D5FA9E /* 5437098-wallpaper-singapore.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "5437098-wallpaper-singapore.jpg"; sourceTree = "<group>"; };
 		E5A1580B20EC578900D5FA9E /* cooltext291931175042605.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cooltext291931175042605.png; sourceTree = "<group>"; };
 		E5A1580C20EC578900D5FA9E /* cooltext291931134825283.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cooltext291931134825283.png; sourceTree = "<group>"; };
@@ -69,7 +72,15 @@
 		227727D320E7927800210BD9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2202E8B320EDD3110040FFBF /* Images */,
+				2202E8B020EDD2EE0040FFBF /* Screen Shot 2018-06-27 at 9.17.33 AM.png */,
+				E5A1580520EC559000D5FA9E /* Screen Shot 2018-06-27 at 9.17.33 AM.png */,
+				E5A1580C20EC578900D5FA9E /* cooltext291931134825283.png */,
+				E5A1580D20EC578A00D5FA9E /* cooltext291931154244776.png */,
+				E5A1580B20EC578900D5FA9E /* cooltext291931175042605.png */,
+				E5A1580920EC56C000D5FA9E /* 5437098-wallpaper-singapore.jpg */,
 				2224242520E8770F00AC5FB1 /* CMProject-MainPageBackgrond.jpg */,
+				2202E8B120EDD2FA0040FFBF /* Images */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -79,12 +90,6 @@
 			children = (
 				22FDC0A720E2798F00258319 /* CMProject */,
 				22FDC0A620E2798F00258319 /* Products */,
-				E5A1580520EC559000D5FA9E /* Screen Shot 2018-06-27 at 9.17.33 AM.png */,
-				E5A1580C20EC578900D5FA9E /* cooltext291931134825283.png */,
-				E5A1580D20EC578A00D5FA9E /* cooltext291931154244776.png */,
-				E5A1580B20EC578900D5FA9E /* cooltext291931175042605.png */,
-				E5A1580920EC56C000D5FA9E /* 5437098-wallpaper-singapore.jpg */,
-				E5A1580720EC569A00D5FA9E /* Screen Shot 2018-06-27 at 9.17.33 AM.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,8 +173,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2202E8B420EDD3120040FFBF /* Images in Resources */,
+				2202E8B220EDD2FA0040FFBF /* Images in Resources */,
 				22FDC0B320E2799200258319 /* LaunchScreen.storyboard in Resources */,
-				E5A1580820EC569A00D5FA9E /* Screen Shot 2018-06-27 at 9.17.33 AM.png in Resources */,
 				E5A1580F20EC578A00D5FA9E /* cooltext291931134825283.png in Resources */,
 				22FDC0B020E2799200258319 /* Assets.xcassets in Resources */,
 				E5A1580620EC559000D5FA9E /* Screen Shot 2018-06-27 at 9.17.33 AM.png in Resources */,
