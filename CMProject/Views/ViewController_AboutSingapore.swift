@@ -11,7 +11,7 @@ import UIKit
 class ViewController_AboutSingapore: UIViewController {
 
     override func viewDidLoad() {
-        self.title = "About Singapore"
+        self.title = "Events In Singapore"
         
         super.viewDidLoad()
 
