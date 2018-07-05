@@ -22,23 +22,12 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="744"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oub-be-aDj">
-                                <rect key="frame" x="146" y="296" width="122" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                <state key="normal" image="cooltext291931154244776.png">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="fBg-yB-amX" kind="show" id="gXC-pG-goP"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKR-94-2Ub">
                                 <rect key="frame" x="37" y="230" width="341" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="About Singapore" image="cooltext291931134825283.png">
+                                <state key="normal" title="About Singapore">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -48,11 +37,23 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGW-kz-mo2">
                                 <rect key="frame" x="138" y="360" width="138" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="cooltext291931175042605.png">
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Credits">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="rzA-7n-bHK" kind="show" id="xp6-3T-9gn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oub-be-aDj">
+                                <rect key="frame" x="146" y="296" width="122" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Map">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fBg-yB-amX" kind="show" id="gXC-pG-goP"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2018-06-27 at 9.17.33 AM.png" translatesAutoresizingMaskIntoConstraints="NO" id="dUS-QI-s8w">
@@ -157,8 +158,5 @@
     <resources>
         <image name="5437098-wallpaper-singapore.jpg" width="1080" height="1920"/>
         <image name="Screen Shot 2018-06-27 at 9.17.33 AM.png" width="1266" height="302"/>
-        <image name="cooltext291931134825283.png" width="628" height="109"/>
-        <image name="cooltext291931154244776.png" width="195" height="109"/>
-        <image name="cooltext291931175042605.png" width="294" height="98"/>
     </resources>
 </document>
