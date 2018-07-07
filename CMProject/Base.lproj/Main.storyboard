@@ -18,11 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5437098-wallpaper-singapore.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mWC-hb-Xe7">
+                            <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CMProject-MainBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="mWC-hb-Xe7">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2018-06-27 at 9.17.33 AM.png" translatesAutoresizingMaskIntoConstraints="NO" id="dUS-QI-s8w">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CMProject-Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="dUS-QI-s8w">
                                 <rect key="frame" x="0.0" y="71" width="414" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGW-kz-mo2">
-                                <rect key="frame" x="138" y="402" width="138" height="62"/>
+                                <rect key="frame" x="37" y="402" width="341" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Credits">
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oub-be-aDj">
-                                <rect key="frame" x="146" y="338" width="122" height="56"/>
+                                <rect key="frame" x="37" y="338" width="341" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Map">
@@ -97,13 +97,28 @@
                     <view key="view" contentMode="scaleToFill" id="oeu-a6-io0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4ZT-HY-DiD">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <viewLayoutGuide key="safeArea" id="kwL-LP-sKf"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="hyc-1G-Lfz"/>
+                        <constraints>
+                            <constraint firstItem="4ZT-HY-DiD" firstAttribute="top" secondItem="nOO-N0-7Ut" secondAttribute="top" id="9vs-qy-XY0"/>
+                            <constraint firstItem="4ZT-HY-DiD" firstAttribute="trailing" secondItem="nOO-N0-7Ut" secondAttribute="trailing" id="Vno-Fx-U64"/>
+                            <constraint firstItem="4ZT-HY-DiD" firstAttribute="bottom" secondItem="nOO-N0-7Ut" secondAttribute="bottom" id="e9K-dJ-obM"/>
+                            <constraint firstItem="4ZT-HY-DiD" firstAttribute="leading" secondItem="nOO-N0-7Ut" secondAttribute="leading" id="eZn-be-e3D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nOO-N0-7Ut"/>
                     </view>
+                    <connections>
+                        <outlet property="mapKitView" destination="4ZT-HY-DiD" id="kRm-SX-zZK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwc-bS-0nP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1871" y="123"/>
+            <point key="canvasLocation" x="1869.5652173913045" y="122.28260869565219"/>
         </scene>
         <!--View Controller Credits-->
         <scene sceneID="kJ8-Kj-9bk">
@@ -113,7 +128,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Main Menu Image by RunSociety - https://www.runsociety.com/wp-content/themes/runsociety-4/images/Singapore-Running-Events.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="QSQ-Ld-xiQ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Main Menu Image by Pintrest (HandLuggageOnly) - https://bit.ly/2lU0tVO" translatesAutoresizingMaskIntoConstraints="NO" id="QSQ-Ld-xiQ">
                                 <rect key="frame" x="0.0" y="129" width="414" height="607"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -156,7 +171,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="5437098-wallpaper-singapore.jpg" width="1080" height="1920"/>
-        <image name="Screen Shot 2018-06-27 at 9.17.33 AM.png" width="1266" height="302"/>
+        <image name="CMProject-Icon.png" width="1266" height="302"/>
+        <image name="CMProject-MainBG.png" width="1080" height="1920"/>
     </resources>
 </document>
