@@ -26,7 +26,6 @@ class ViewController_Map: UIViewController {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius, regionRadius)
         mapKitView.setRegion(coordinateRegion, animated: true)
-        print("Region Set")
     }
     
     override func viewDidLoad() {
@@ -71,7 +70,6 @@ class ViewController_Map: UIViewController {
         // Set up map
         mapKitView.delegate = self
         mapKitView.showsScale = true
-        mapKitView.showsPointsOfInterest = true
         mapKitView.showsTraffic = true
         mapKitView.showsUserLocation = true
         mapKitView.register(AttractionMarkerView.self,

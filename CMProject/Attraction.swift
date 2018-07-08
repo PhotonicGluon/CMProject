@@ -52,6 +52,8 @@ class Attraction: NSObject, MKAnnotation {
         case "Casual":
             return .cyan
         case "Sights":
+            return .orange
+        case "Shopping":
             return .blue
         default:
             return .green
@@ -69,6 +71,7 @@ class Attraction: NSObject, MKAnnotation {
     var imageName: String? {
         if locationType == "Action" { return "Adventure" }
         else if locationType == "Sights" { return "Binoculars" }
+        else if locationType == "Shopping" { return "Shopping" }
         return "Flag"
     }
 }
