@@ -67,7 +67,6 @@
 		223B1F8020F0A77E00791DEE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				227A5DCA20F1121A00E59520 /* Tourist Attractions */,
 				223B1F8920F0AB3800791DEE /* GPXs */,
 				223B1F8120F0A79000791DEE /* Images */,
 			);
@@ -91,14 +90,6 @@
 			path = GPXs;
 			sourceTree = "<group>";
 		};
-		227A5DCA20F1121A00E59520 /* Tourist Attractions */ = {
-			isa = PBXGroup;
-			children = (
-				227A5DCB20F115E000E59520 /* SGTouristLoc.csv */,
-			);
-			path = "Tourist Attractions";
-			sourceTree = "<group>";
-		};
 		22FDC09C20E2798F00258319 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +109,7 @@
 		22FDC0A720E2798F00258319 /* CMProject */ = {
 			isa = PBXGroup;
 			children = (
+				227A5DCB20F115E000E59520 /* SGTouristLoc.csv */,
 				227A5DC720F0F89900E59520 /* AttractionMarkerView.swift */,
 				227A5DC020F0EECC00E59520 /* Attraction.swift */,
 				223B1F8020F0A77E00791DEE /* Resources */,

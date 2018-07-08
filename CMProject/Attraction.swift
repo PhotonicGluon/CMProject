@@ -27,6 +27,20 @@ class Attraction: NSObject, MKAnnotation {
         super.init()
     }
     
+    init?(attractionData: [Any]) {
+        self.title = attractionData[0] as? String
+        self.locationDetail = attractionData[1] as! String
+        self.locationType = attractionData[2] as! String
+        if let latitude = Double(attractionData[3] as! String),
+            let longitude = Double(attractionData[4] as! String) {
+            self.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        } else {
+            self.coordinate = CLLocationCoordinate2D()
+        }
+        self.imageLink = attractionData[5] as! String
+    }
+    
+    
     var subtitle: String? {
         return locationDetail
     }

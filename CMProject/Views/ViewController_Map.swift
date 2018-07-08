@@ -17,38 +17,66 @@ class ViewController_Map: UIViewController {
     @IBOutlet weak var mapKitView: MKMapView!
     
     // Variables
+    var attractions: [Attraction] = []
+    let regionRadius: CLLocationDistance = 1000
     
     // Func
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
         
-        let span = MKCoordinateSpanMake(0.5, 0.5)
-
-        let myLocation = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-        let region = MKCoordinateRegionMake(myLocation, span)
+        let myLocation = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegionMakeWithDistance(myLocation.coordinate, regionRadius, regionRadius)
         
         mapKitView.setRegion(region, animated: true)
         self.mapKitView.showsUserLocation = true
     }
     
-    // Main Functions
     override func viewDidLoad() {
         self.title = "Map"
         
         super.viewDidLoad()
-
+        
+        // Gather data
+        let path = Bundle.main.path(forResource: "SGTouristLoc", ofType: "csv")
+        
+        let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: path!)
+        {
+            let fullText = try! String(contentsOfFile: path!, encoding: String.Encoding.utf8)
+            let readings = fullText.components(separatedBy: "\n")
+            
+            for i in 1..<readings.count-1
+            {
+                let attractionData = readings[i].components(separatedBy: "|")
+                
+                let title = attractionData[0]
+                let locationDetail = attractionData[1]
+                let locationType = attractionData[2]
+                var location:CLLocationCoordinate2D
+                if let latitude = Double(attractionData[3]), let longitude = Double(attractionData[4])
+                {
+                    location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+                } else {
+                    location = CLLocationCoordinate2D()
+                }
+                let imageLink = attractionData[5]
+                
+                attractions.append(Attraction(title: title, locationDetail: locationDetail, locationType: locationType, coordinate: location, imageLink: imageLink))
+            }
+        }
+        
+        
+        // Set up map
         mapKitView.delegate = self
         mapKitView.showsScale = true
         mapKitView.showsPointsOfInterest = true
         mapKitView.showsTraffic = true
         mapKitView.showsUserLocation = true
-        mapKitView.register(AttractionMarkerView.self,forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        mapKitView.register(AttractionMarkerView.self,
+                         forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         
         // Tourist Attractions
-        let singaporeZoo = Attraction(title: "Singapore Zoo", locationDetail: "The Singapore Zoo, formerly known as the Singapore Zoological Gardens and commonly known locally as the Mandai Zoo, occupies 28 hectares (69 acres) on the margins of Upper Seletar Reservoir within Singapore's heavily forested central catchment area.", locationType: "Casual", coordinate: CLLocationCoordinate2D(latitude: 1.4043, longitude: 103.7930), imageLink: "https://www.straitstimes.com/sites/default/files/articles/2018/04/17/nm-zoo-1704.jpg")
-        
-        // Add those attractions
-        mapKitView.addAnnotation(singaporeZoo)
+        mapKitView.addAnnotations(attractions)
 
     }
     
@@ -56,7 +84,6 @@ class ViewController_Map: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     /*
     // MARK: - Navigation
