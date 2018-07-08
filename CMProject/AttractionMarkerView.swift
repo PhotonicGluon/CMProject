@@ -21,9 +21,14 @@ class AttractionMarkerView: MKMarkerAnnotationView {
             let attractionImageDisplay = UIImageView()
             
             let url = URL(string: attraction.imageLink)
-            let data = try? Data(contentsOf: url!) // Make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+            if let data = try? Data(contentsOf: url!)
+            {
+                attractionImageDisplay.image = UIImage(data: data)
+            } else {
+                print("Error: Image from \(attraction.imageLink) cannot be loaded. Loading default image.")
+                attractionImageDisplay.image = #imageLiteral(resourceName: "CMProject-NoImageDetected.png")
+            }
             
-            attractionImageDisplay.image = UIImage(data: data!)
             attractionImageDisplay.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: ATTRACTION_IMAGE_SIZE, height: ATTRACTION_IMAGE_SIZE))
             leftCalloutAccessoryView = attractionImageDisplay
             

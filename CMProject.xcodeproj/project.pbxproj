@@ -12,11 +12,12 @@
 		223B1F8420F0A7B400791DEE /* CMProject-MainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 223B1F8220F0A7B300791DEE /* CMProject-MainBG.png */; };
 		223B1F8520F0A7B400791DEE /* CMProject-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 223B1F8320F0A7B400791DEE /* CMProject-Icon.png */; };
 		223B1F8B20F0AB5900791DEE /* Singapore, Singapore.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 223B1F8A20F0AB5900791DEE /* Singapore, Singapore.gpx */; };
+		2249E50F20F1CA66006A94B2 /* SGTouristLoc.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2249E50E20F1CA66006A94B2 /* SGTouristLoc.txt */; };
+		2249E51120F1D037006A94B2 /* CMProject-NoImageDetected.png in Resources */ = {isa = PBXBuildFile; fileRef = 2249E51020F1D037006A94B2 /* CMProject-NoImageDetected.png */; };
 		227727D720E7991D00210BD9 /* ViewController_AboutSingapore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227727D620E7991D00210BD9 /* ViewController_AboutSingapore.swift */; };
 		227727D920E7992E00210BD9 /* ViewController_Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227727D820E7992E00210BD9 /* ViewController_Credits.swift */; };
 		227A5DC120F0EECC00E59520 /* Attraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227A5DC020F0EECC00E59520 /* Attraction.swift */; };
 		227A5DC820F0F89900E59520 /* AttractionMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227A5DC720F0F89900E59520 /* AttractionMarkerView.swift */; };
-		227A5DCC20F115E000E59520 /* SGTouristLoc.csv in Resources */ = {isa = PBXBuildFile; fileRef = 227A5DCB20F115E000E59520 /* SGTouristLoc.csv */; };
 		22FDC0A920E2798F00258319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FDC0A820E2798F00258319 /* AppDelegate.swift */; };
 		22FDC0AE20E2798F00258319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FDC0AC20E2798F00258319 /* Main.storyboard */; };
 		22FDC0B020E2799200258319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22FDC0AF20E2799200258319 /* Assets.xcassets */; };
@@ -29,11 +30,12 @@
 		223B1F8220F0A7B300791DEE /* CMProject-MainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CMProject-MainBG.png"; sourceTree = "<group>"; };
 		223B1F8320F0A7B400791DEE /* CMProject-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CMProject-Icon.png"; sourceTree = "<group>"; };
 		223B1F8A20F0AB5900791DEE /* Singapore, Singapore.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Singapore, Singapore.gpx"; sourceTree = "<group>"; };
+		2249E50E20F1CA66006A94B2 /* SGTouristLoc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SGTouristLoc.txt; sourceTree = "<group>"; };
+		2249E51020F1D037006A94B2 /* CMProject-NoImageDetected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CMProject-NoImageDetected.png"; sourceTree = "<group>"; };
 		227727D620E7991D00210BD9 /* ViewController_AboutSingapore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_AboutSingapore.swift; sourceTree = "<group>"; };
 		227727D820E7992E00210BD9 /* ViewController_Credits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Credits.swift; sourceTree = "<group>"; };
 		227A5DC020F0EECC00E59520 /* Attraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attraction.swift; sourceTree = "<group>"; };
 		227A5DC720F0F89900E59520 /* AttractionMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionMarkerView.swift; sourceTree = "<group>"; };
-		227A5DCB20F115E000E59520 /* SGTouristLoc.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SGTouristLoc.csv; sourceTree = "<group>"; };
 		22FDC0A520E2798F00258319 /* CMProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CMProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22FDC0A820E2798F00258319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22FDC0AD20E2798F00258319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		223B1F8120F0A79000791DEE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2249E51020F1D037006A94B2 /* CMProject-NoImageDetected.png */,
 				223B1F8320F0A7B400791DEE /* CMProject-Icon.png */,
 				223B1F8220F0A7B300791DEE /* CMProject-MainBG.png */,
 			);
@@ -109,7 +112,7 @@
 		22FDC0A720E2798F00258319 /* CMProject */ = {
 			isa = PBXGroup;
 			children = (
-				227A5DCB20F115E000E59520 /* SGTouristLoc.csv */,
+				2249E50E20F1CA66006A94B2 /* SGTouristLoc.txt */,
 				227A5DC720F0F89900E59520 /* AttractionMarkerView.swift */,
 				227A5DC020F0EECC00E59520 /* Attraction.swift */,
 				223B1F8020F0A77E00791DEE /* Resources */,
@@ -182,11 +185,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				22FDC0B320E2799200258319 /* LaunchScreen.storyboard in Resources */,
-				227A5DCC20F115E000E59520 /* SGTouristLoc.csv in Resources */,
+				2249E50F20F1CA66006A94B2 /* SGTouristLoc.txt in Resources */,
 				223B1F8420F0A7B400791DEE /* CMProject-MainBG.png in Resources */,
 				223B1F8B20F0AB5900791DEE /* Singapore, Singapore.gpx in Resources */,
 				223B1F8520F0A7B400791DEE /* CMProject-Icon.png in Resources */,
 				22FDC0B020E2799200258319 /* Assets.xcassets in Resources */,
+				2249E51120F1D037006A94B2 /* CMProject-NoImageDetected.png in Resources */,
 				22FDC0AE20E2798F00258319 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

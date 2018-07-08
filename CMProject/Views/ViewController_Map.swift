@@ -18,17 +18,15 @@ class ViewController_Map: UIViewController {
     
     // Variables
     var attractions: [Attraction] = []
-    let regionRadius: CLLocationDistance = 1000
+    let regionRadius: CLLocationDistance = 10000  // Set the view to regionRadius metres
+    let initialLocation = CLLocation(latitude: 1.313251, longitude: 103.774345)
     
     // Func
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations[0]
-        
-        let myLocation = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        let region = MKCoordinateRegionMakeWithDistance(myLocation.coordinate, regionRadius, regionRadius)
-        
-        mapKitView.setRegion(region, animated: true)
-        self.mapKitView.showsUserLocation = true
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+                                                                  regionRadius, regionRadius)
+        mapKitView.setRegion(coordinateRegion, animated: true)
+        print("Region Set")
     }
     
     override func viewDidLoad() {
@@ -36,8 +34,11 @@ class ViewController_Map: UIViewController {
         
         super.viewDidLoad()
         
+        // Center map
+        centerMapOnLocation(location: initialLocation)
+        
         // Gather data
-        let path = Bundle.main.path(forResource: "SGTouristLoc", ofType: "csv")
+        let path = Bundle.main.path(forResource: "SGTouristLoc", ofType: "txt")
         
         let fileManager = FileManager.default
         if fileManager.fileExists(atPath: path!)
@@ -63,6 +64,7 @@ class ViewController_Map: UIViewController {
                 
                 attractions.append(Attraction(title: title, locationDetail: locationDetail, locationType: locationType, coordinate: location, imageLink: imageLink))
             }
+            print("No. of attractions loaded: \(attractions.count)")
         }
         
         
