@@ -18,7 +18,7 @@ class ViewController_Map: UIViewController {
     
     // Variables
     var attractions: [Attraction] = []
-    let regionRadius: CLLocationDistance = 10000  // Set the view to regionRadius metres
+    let regionRadius: CLLocationDistance = 20000  // Set the view to regionRadius metres
     let initialLocation = CLLocation(latitude: 1.313251, longitude: 103.774345)
     
     // Func

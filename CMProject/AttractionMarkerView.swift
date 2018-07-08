@@ -25,7 +25,7 @@ class AttractionMarkerView: MKMarkerAnnotationView {
             {
                 attractionImageDisplay.image = UIImage(data: data)
             } else {
-                print("Error: Image from \(attraction.imageLink) cannot be loaded. Loading default image.")
+                print("Error: \(attraction.title!)\'s image cannot be loaded. Loading default image.")
                 attractionImageDisplay.image = #imageLiteral(resourceName: "CMProject-NoImageDetected.png")
             }
             
