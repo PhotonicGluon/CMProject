@@ -15,28 +15,33 @@ class ViewController_Map: UIViewController {
     
     // Outputs
     @IBOutlet weak var mapKitView: MKMapView!
+    @IBOutlet weak var image_loading: UIImageView!
     
     // Variables
-    var attractions: [Attraction] = []
+    var attractions: [Attraction] = []  // Create an array which ONLY accepts Attraction objects
     let regionRadius: CLLocationDistance = 20000  // Set the view to regionRadius metres
-    let initialLocation = CLLocation(latitude: 1.313251, longitude: 103.774345)
+    let initialLocation = CLLocation(latitude: 1.313251, longitude: 103.774345)  // SST ;)
     
     // Func
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius, regionRadius)
         mapKitView.setRegion(coordinateRegion, animated: true)
+        
     }
     
     override func viewDidLoad() {
         self.title = "Map"
-        
         super.viewDidLoad()
+
+        mapKitView.delegate = self
+        mapKitView.showsScale = true
+        mapKitView.showsTraffic = true
+        mapKitView.showsUserLocation = true
+        mapKitView.register(AttractionMarkerView.self,
+                                 forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         
-        // Center map
-        centerMapOnLocation(location: initialLocation)
-        
-        // Gather data
+        print("MARK: Gathering data")
         let path = Bundle.main.path(forResource: "SGTouristLoc", ofType: "txt")
         
         let fileManager = FileManager.default
@@ -63,21 +68,22 @@ class ViewController_Map: UIViewController {
                 
                 attractions.append(Attraction(title: title, locationDetail: locationDetail, locationType: locationType, coordinate: location, imageLink: imageLink))
             }
-            print("No. of attractions loaded: \(attractions.count)")
         }
         
+        let loadingWheel = UIViewController.displaySpinner(onView: self.view)  // Create spinner
+        DispatchQueue.global(qos: .background).async  // Slower than the main
+        {
+            self.mapKitView.addAnnotations(self.attractions)
+            UIViewController.removeSpinner(spinner: loadingWheel)
+            
+            print("Loaded annotations.")
+            print("No. of attractions loaded: \(self.attractions.count)")  // Finished then show
+        }
         
-        // Set up map
-        mapKitView.delegate = self
-        mapKitView.showsScale = true
-        mapKitView.showsTraffic = true
-        mapKitView.showsUserLocation = true
-        mapKitView.register(AttractionMarkerView.self,
-                         forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-        
-        // Tourist Attractions
-        mapKitView.addAnnotations(attractions)
-
+        DispatchQueue.main.async
+        {
+            self.centerMapOnLocation(location: self.initialLocation)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -106,3 +112,26 @@ extension ViewController_Map: MKMapViewDelegate {
     }
 }
 
+
+extension UIViewController {   // Create a spinning loading wheel
+    class func displaySpinner(onView : UIView) -> UIView {
+        let spinnerView = UIView.init(frame: onView.bounds)
+        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)  // Grey
+        let ai = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
+        ai.startAnimating()
+        ai.center = spinnerView.center
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(ai)
+            onView.addSubview(spinnerView)
+        }
+        
+        return spinnerView
+    }
+    
+    class func removeSpinner(spinner :UIView) {
+        DispatchQueue.main.async {
+            spinner.removeFromSuperview()
+        }
+    }
+}

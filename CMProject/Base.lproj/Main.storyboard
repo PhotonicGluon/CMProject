@@ -191,10 +191,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Main Menu Image by Pintrest (HandLuggageOnly) - https://bit.ly/2lU0tVO" translatesAutoresizingMaskIntoConstraints="NO" id="QSQ-Ld-xiQ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSQ-Ld-xiQ">
                                 <rect key="frame" x="0.0" y="129" width="414" height="607"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Main Menu Image by Pintrest (HandLuggageOnly) - https://bit.ly/2lU0tVO  Location Data retreved from Wikipedia: https://en.wikipedia.org/wiki/Main_Page</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

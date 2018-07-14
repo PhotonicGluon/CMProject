@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2227627F20E49BF00043320A /* ViewController_MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227627D20E49BF00043320A /* ViewController_MainMenu.swift */; };
 		2227628020E49BF00043320A /* ViewController_Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227627E20E49BF00043320A /* ViewController_Map.swift */; };
+		2227B18E20F86B9D00335397 /* CMProject-LoadingScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2227B18D20F86B9C00335397 /* CMProject-LoadingScreen.png */; };
 		223B1F8420F0A7B400791DEE /* CMProject-MainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 223B1F8220F0A7B300791DEE /* CMProject-MainBG.png */; };
 		223B1F8520F0A7B400791DEE /* CMProject-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 223B1F8320F0A7B400791DEE /* CMProject-Icon.png */; };
 		223B1F8B20F0AB5900791DEE /* Singapore, Singapore.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 223B1F8A20F0AB5900791DEE /* Singapore, Singapore.gpx */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		2227627D20E49BF00043320A /* ViewController_MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_MainMenu.swift; sourceTree = "<group>"; };
 		2227627E20E49BF00043320A /* ViewController_Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Map.swift; sourceTree = "<group>"; };
+		2227B18D20F86B9C00335397 /* CMProject-LoadingScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CMProject-LoadingScreen.png"; sourceTree = "<group>"; };
 		223B1F8220F0A7B300791DEE /* CMProject-MainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CMProject-MainBG.png"; sourceTree = "<group>"; };
 		223B1F8320F0A7B400791DEE /* CMProject-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CMProject-Icon.png"; sourceTree = "<group>"; };
 		223B1F8A20F0AB5900791DEE /* Singapore, Singapore.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Singapore, Singapore.gpx"; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		223B1F8120F0A79000791DEE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2227B18D20F86B9C00335397 /* CMProject-LoadingScreen.png */,
 				2249E51020F1D037006A94B2 /* CMProject-NoImageDetected.png */,
 				223B1F8320F0A7B400791DEE /* CMProject-Icon.png */,
 				223B1F8220F0A7B300791DEE /* CMProject-MainBG.png */,
@@ -198,6 +201,7 @@
 				22FDC0B020E2799200258319 /* Assets.xcassets in Resources */,
 				228B4C1720F48D6000EF0661 /* SGTouristEvents.txt in Resources */,
 				2249E51120F1D037006A94B2 /* CMProject-NoImageDetected.png in Resources */,
+				2227B18E20F86B9D00335397 /* CMProject-LoadingScreen.png in Resources */,
 				22FDC0AE20E2798F00258319 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
