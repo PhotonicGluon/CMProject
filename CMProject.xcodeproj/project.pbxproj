@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		2227627F20E49BF00043320A /* ViewController_MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227627D20E49BF00043320A /* ViewController_MainMenu.swift */; };
 		2227628020E49BF00043320A /* ViewController_Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227627E20E49BF00043320A /* ViewController_Map.swift */; };
-		2227B18E20F86B9D00335397 /* CMProject-LoadingScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2227B18D20F86B9C00335397 /* CMProject-LoadingScreen.png */; };
+		22365A8220FA301300B20B37 /* ViewController_Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22365A8120FA301300B20B37 /* ViewController_Directions.swift */; };
+		22365A8720FA306800B20B37 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22365A8620FA306800B20B37 /* MapKit.framework */; };
 		223B1F8420F0A7B400791DEE /* CMProject-MainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 223B1F8220F0A7B300791DEE /* CMProject-MainBG.png */; };
 		223B1F8520F0A7B400791DEE /* CMProject-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 223B1F8320F0A7B400791DEE /* CMProject-Icon.png */; };
 		223B1F8B20F0AB5900791DEE /* Singapore, Singapore.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 223B1F8A20F0AB5900791DEE /* Singapore, Singapore.gpx */; };
@@ -30,7 +31,8 @@
 /* Begin PBXFileReference section */
 		2227627D20E49BF00043320A /* ViewController_MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_MainMenu.swift; sourceTree = "<group>"; };
 		2227627E20E49BF00043320A /* ViewController_Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Map.swift; sourceTree = "<group>"; };
-		2227B18D20F86B9C00335397 /* CMProject-LoadingScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CMProject-LoadingScreen.png"; sourceTree = "<group>"; };
+		22365A8120FA301300B20B37 /* ViewController_Directions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Directions.swift; sourceTree = "<group>"; };
+		22365A8620FA306800B20B37 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		223B1F8220F0A7B300791DEE /* CMProject-MainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CMProject-MainBG.png"; sourceTree = "<group>"; };
 		223B1F8320F0A7B400791DEE /* CMProject-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CMProject-Icon.png"; sourceTree = "<group>"; };
 		223B1F8A20F0AB5900791DEE /* Singapore, Singapore.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Singapore, Singapore.gpx"; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22365A8720FA306800B20B37 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,8 +71,17 @@
 				2227627E20E49BF00043320A /* ViewController_Map.swift */,
 				227727D820E7992E00210BD9 /* ViewController_Credits.swift */,
 				228B4C2B20F4EC4600EF0661 /* ViewController_Events.swift */,
+				22365A8120FA301300B20B37 /* ViewController_Directions.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		22365A8320FA306500B20B37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22365A8620FA306800B20B37 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		223B1F8020F0A77E00791DEE /* Resources */ = {
@@ -84,7 +96,6 @@
 		223B1F8120F0A79000791DEE /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				2227B18D20F86B9C00335397 /* CMProject-LoadingScreen.png */,
 				2249E51020F1D037006A94B2 /* CMProject-NoImageDetected.png */,
 				223B1F8320F0A7B400791DEE /* CMProject-Icon.png */,
 				223B1F8220F0A7B300791DEE /* CMProject-MainBG.png */,
@@ -105,6 +116,7 @@
 			children = (
 				22FDC0A720E2798F00258319 /* CMProject */,
 				22FDC0A620E2798F00258319 /* Products */,
+				22365A8320FA306500B20B37 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,6 +179,14 @@
 				TargetAttributes = {
 					22FDC0A420E2798F00258319 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -201,7 +221,6 @@
 				22FDC0B020E2799200258319 /* Assets.xcassets in Resources */,
 				228B4C1720F48D6000EF0661 /* SGTouristEvents.txt in Resources */,
 				2249E51120F1D037006A94B2 /* CMProject-NoImageDetected.png in Resources */,
-				2227B18E20F86B9D00335397 /* CMProject-LoadingScreen.png in Resources */,
 				22FDC0AE20E2798F00258319 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +234,7 @@
 			files = (
 				2227627F20E49BF00043320A /* ViewController_MainMenu.swift in Sources */,
 				228B4C2C20F4EC4600EF0661 /* ViewController_Events.swift in Sources */,
+				22365A8220FA301300B20B37 /* ViewController_Directions.swift in Sources */,
 				227727D920E7992E00210BD9 /* ViewController_Credits.swift in Sources */,
 				2227628020E49BF00043320A /* ViewController_Map.swift in Sources */,
 				228B4C2A20F4EB8100EF0661 /* CollectionViewCell.swift in Sources */,

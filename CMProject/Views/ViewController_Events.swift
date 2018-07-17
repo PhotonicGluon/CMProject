@@ -20,6 +20,9 @@ class ViewController_Events: UIViewController, UICollectionViewDataSource, UICol
     
     // Func
     override func viewDidLoad() {
+        print()
+        print("LOADING 'EVENTS' VIEW CONTROLLER")
+        
         self.title = "Events"
         
         super.viewDidLoad()

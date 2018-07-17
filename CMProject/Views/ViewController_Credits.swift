@@ -11,6 +11,9 @@ import UIKit
 class ViewController_Credits: UIViewController {
 
     override func viewDidLoad() {
+        print()
+        print("LOADING 'CREDITS' VIEW CONTROLLER")
+        
         self.title = "Credits"
         
         super.viewDidLoad()

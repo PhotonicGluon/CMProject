@@ -13,8 +13,9 @@ class ViewController_MainMenu: UIViewController {
     
     // Outlet
     @IBOutlet weak var btn_Map: UIButton!
-    @IBOutlet weak var btn_AboutSG: UIButton!
+    @IBOutlet weak var btn_AboutSG: UIButton! // NOTE: Now has been updated to SGEvents
     @IBOutlet weak var btn_Credits: UIButton!
+    @IBOutlet weak var btn_Directions: UIButton!
     
     
     // Variables
@@ -26,7 +27,9 @@ class ViewController_MainMenu: UIViewController {
     // Func
     
     override func viewDidLoad() {
-        self.title = "Main Menu" // Update
+        print("LOADING 'MAIN MENU' VIEW CONTROLLER")
+        
+        self.title = "Main Menu"
         
         // Update button look
         btn_Map.layer.borderWidth = BOARDER_WIDTH
@@ -43,6 +46,11 @@ class ViewController_MainMenu: UIViewController {
         btn_Credits.layer.borderColor = BOARDER_COLOR
         btn_Credits.layer.cornerRadius = CORNER_RADIUS
         btn_Credits.layer.backgroundColor = BACKGROUND_COLOR
+        
+        btn_Directions.layer.borderWidth = BOARDER_WIDTH
+        btn_Directions.layer.borderColor = BOARDER_COLOR
+        btn_Directions.layer.cornerRadius = CORNER_RADIUS
+        btn_Directions.layer.backgroundColor = BACKGROUND_COLOR
         
         
         super.viewDidLoad()

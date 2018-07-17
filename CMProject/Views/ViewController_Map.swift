@@ -15,8 +15,7 @@ class ViewController_Map: UIViewController {
     
     // Outputs
     @IBOutlet weak var mapKitView: MKMapView!
-    @IBOutlet weak var image_loading: UIImageView!
-    
+
     // Variables
     var attractions: [Attraction] = []  // Create an array which ONLY accepts Attraction objects
     let regionRadius: CLLocationDistance = 20000  // Set the view to regionRadius metres
@@ -31,13 +30,12 @@ class ViewController_Map: UIViewController {
     }
     
     override func viewDidLoad() {
+        print()
+        print("LOADING 'MAP' VIEW CONTROLLER")
         self.title = "Map"
         super.viewDidLoad()
 
         mapKitView.delegate = self
-        mapKitView.showsScale = true
-        mapKitView.showsTraffic = true
-        mapKitView.showsUserLocation = true
         mapKitView.register(AttractionMarkerView.self,
                                  forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         
@@ -109,6 +107,7 @@ extension ViewController_Map: MKMapViewDelegate {
         let location = view.annotation as! Attraction
         let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
         location.mapItem().openInMaps(launchOptions: launchOptions)
+        
     }
 }
 
