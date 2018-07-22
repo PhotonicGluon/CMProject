@@ -72,11 +72,14 @@ class ViewController_Events: UIViewController, UICollectionViewDataSource, UICol
         cell.eventDate.text = cellContents["Event_Date"]
         
         let url = URL(string: cellContents["Image"]!)
-        if let data = try? Data(contentsOf: url!)
+        
+        do
         {
+            let data = try Data(contentsOf: url!)
             cell.eventImage.image = UIImage(data: data)
-        } else {
-            print("Error: \(cellContents["Title"]!)\'s image cannot be loaded. Loading default image.")
+            
+        } catch {  // If there is an error
+            print("\(cell.eventTitle.text!)'s image cannot be loaded, loading default image.")
             cell.eventImage.image = #imageLiteral(resourceName: "CMProject-NoImageDetected.png")
         }
         

@@ -10,24 +10,27 @@ import UIKit
 import MapKit
 import Contacts
 
-class ViewController_Map: UIViewController {
+class ViewController_Map: UIViewController, MKMapViewDelegate {
     // Inputs
     
     // Outputs
     @IBOutlet weak var mapKitView: MKMapView!
-
+    
     // Variables
     var attractions: [Attraction] = []  // Create an array which ONLY accepts Attraction objects
     let regionRadius: CLLocationDistance = 20000  // Set the view to regionRadius metres
     let initialLocation = CLLocation(latitude: 1.313251, longitude: 103.774345)  // SST ;)
     
+    var hamburgerMenuVisible = false
+    
     // Func
-    func centerMapOnLocation(location: CLLocation) {
+    func centerMapOnLocation(location: CLLocation)
+    {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius, regionRadius)
         mapKitView.setRegion(coordinateRegion, animated: true)
-        
     }
+    
     
     override func viewDidLoad() {
         print()
@@ -101,15 +104,6 @@ class ViewController_Map: UIViewController {
 
 }
 
-extension ViewController_Map: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
-                 calloutAccessoryControlTapped control: UIControl) {
-        let location = view.annotation as! Attraction
-        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-        location.mapItem().openInMaps(launchOptions: launchOptions)
-        
-    }
-}
 
 
 extension UIViewController {   // Create a spinning loading wheel

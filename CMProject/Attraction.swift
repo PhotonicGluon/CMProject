@@ -23,30 +23,29 @@ class Attraction: NSObject, MKAnnotation {
         self.locationType = locationType
         self.coordinate = coordinate
         self.imageLink = imageLink
-
+        
         super.init()
     }
     
     var subtitle: String? {
         return locationDetail
     }
-    
     var markerTintColor: UIColor  {
         switch locationType {
         case "Action":
             return .red
         case "Casual":
-            return .cyan
+            return .green
         case "Sights":
             return .orange
         case "Shopping":
             return .blue
         default:
-            return .green
+            return .cyan  // Default but will never be used
         }
     }
     
-    func mapItem() -> MKMapItem {
+    func mapItem() -> MKMapItem {  // AKA Pins
         let addressDict = [CNPostalAddressStreetKey: subtitle!]
         let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDict)
         let mapItem = MKMapItem(placemark: placemark)

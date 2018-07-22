@@ -11,10 +11,10 @@ import MapKit
 import AVFoundation
 import CoreLocation
 
-let CIRCLE_RADII = 10
+let CIRCLE_RADII = 5
 let LINE_WIDTH = 2
 
-class ViewController_Directions: UIViewController {
+class ViewController_Directions: UIViewController {  // Subview of maps
     // Outlets
     @IBOutlet weak var label_directions: UILabel!
     @IBOutlet weak var searchbar: UISearchBar!
@@ -28,7 +28,7 @@ class ViewController_Directions: UIViewController {
     var segmentIndex:Int = 0
     
     var steps = [MKRouteStep]()
-    let speechSynthesizer = AVSpeechSynthesizer()
+    let speechSynthesizer = AVSpeechSynthesizer()  // Speaker
     
     var stepCounter = 0
     
@@ -41,7 +41,7 @@ class ViewController_Directions: UIViewController {
     
     override func viewDidLoad() {
         print()
-        print("LOADING 'DIRECTIONS' VIEW CONTROLLER")
+        print("LOADING 'DIRECTIONS' SUBVIEW")
         
         self.title = "Directions"
         

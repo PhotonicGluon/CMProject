@@ -41,10 +41,10 @@ class AttractionMarkerView: MKMarkerAnnotationView {
             let attractionImgDisplay = getImage(url: attraction.imageLink)  // Process using guard
             leftCalloutAccessoryView = attractionImgDisplay
             
-            let mapsButton = UIButton(frame: CGRect(origin: CGPoint.zero,
-                                                    size: CGSize(width: MAP_BTN_IMG_SIZE, height: MAP_BTN_IMG_SIZE)))
-            mapsButton.setBackgroundImage(UIImage(named: "Maps-Icon"), for: UIControlState())
-            rightCalloutAccessoryView = mapsButton
+//            let infoButton = UIButton(frame: CGRect(origin: CGPoint.zero,
+//                                                    size: CGSize(width: MAP_BTN_IMG_SIZE, height: MAP_BTN_IMG_SIZE)))
+//            infoButton.setBackgroundImage(UIImage(named: "Maps-Icon"), for: UIControlState())
+//            rightCalloutAccessoryView = infoButton
             markerTintColor = attraction.markerTintColor
             
             if let imageName = attraction.imageName {
