@@ -15,14 +15,14 @@ class Attraction: NSObject, MKAnnotation {
     let locationDetail: String
     let locationType: String
     let coordinate: CLLocationCoordinate2D
-    let imageLink: String
+    let imageFile: String
     
-    init(title: String, locationDetail:String, locationType: String, coordinate: CLLocationCoordinate2D, imageLink:String) {
+    init(title: String, locationDetail:String, locationType: String, coordinate: CLLocationCoordinate2D, imageFile:String) {
         self.title = title
         self.locationDetail = locationDetail
         self.locationType = locationType
         self.coordinate = coordinate
-        self.imageLink = imageLink
+        self.imageFile = imageFile
         
         super.init()
     }

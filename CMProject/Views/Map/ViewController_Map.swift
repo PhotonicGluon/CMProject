@@ -53,7 +53,7 @@ class ViewController_Map: UIViewController, MKMapViewDelegate {
             
             for i in 1..<readings.count-1
             {
-                let attractionData = readings[i].components(separatedBy: "|")
+                let attractionData = readings[i].components(separatedBy: "|")  // Because we can't use ","
                 
                 let title = attractionData[0]
                 let locationDetail = attractionData[1]
@@ -65,9 +65,9 @@ class ViewController_Map: UIViewController, MKMapViewDelegate {
                 } else {
                     location = CLLocationCoordinate2D()
                 }
-                let imageLink = attractionData[5]
+                let imageFile = attractionData[5]
                 
-                attractions.append(Attraction(title: title, locationDetail: locationDetail, locationType: locationType, coordinate: location, imageLink: imageLink))
+                attractions.append(Attraction(title: title, locationDetail: locationDetail, locationType: locationType, coordinate: location, imageFile: imageFile))
             }
         }
         

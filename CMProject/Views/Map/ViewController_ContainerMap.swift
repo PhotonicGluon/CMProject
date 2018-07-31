@@ -18,6 +18,9 @@ class ViewController_ContainerMap: UIViewController {  // This is to store the a
     let ANIMATION_DURATION = 0.2
     var hamburgerMenuOpen = false
     
+    var seguePrepDebounce:Bool = true
+    var segueDebounceCount:Int = 0
+    
     // Func
     @objc func toggleHamburgerMenu()
     {
@@ -45,6 +48,7 @@ class ViewController_ContainerMap: UIViewController {  // This is to store the a
         toggleHamburgerMenu()  // Toggle before switch view
         performSegue(withIdentifier: "ShowDirections", sender: nil)
     }
+    
     @IBAction func btn_hamburgerMenu_onTap(_ sender: Any)
     {
       toggleHamburgerMenu()
@@ -53,18 +57,25 @@ class ViewController_ContainerMap: UIViewController {  // This is to store the a
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Add observers
         NotificationCenter.default.addObserver(self, selector: #selector(toggleHamburgerMenu), name: NSNotification.Name("ToggleHamburgerMenu"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(showDirections), name: NSNotification.Name("ShowDirections"), object: nil)
-
-//         Do any additional setup after loading the view.
     }
-
+    
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        super.viewWillDisappear(animated)
+        
+        // Check if actually moving
+        if self.isMovingFromParentViewController {
+            self.constraint_sideMenu.constant = 0  // "Open" the menu
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -73,6 +84,6 @@ class ViewController_ContainerMap: UIViewController {  // This is to store the a
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+     */
 
 }
