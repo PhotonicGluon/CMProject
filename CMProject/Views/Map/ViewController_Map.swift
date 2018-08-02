@@ -65,9 +65,8 @@ class ViewController_Map: UIViewController, MKMapViewDelegate {
                 } else {
                     location = CLLocationCoordinate2D()
                 }
-                let imageFile = attractionData[5]
                 
-                attractions.append(Attraction(title: title, locationDetail: locationDetail, locationType: locationType, coordinate: location, imageFile: imageFile))
+                attractions.append(Attraction(title: title, locationDetail: locationDetail, locationType: locationType, coordinate: location))
             }
         }
         

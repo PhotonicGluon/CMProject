@@ -1,9 +1,9 @@
 TITLE|EVENT_TYPE|DATE|IMAGE
-Singapore Art Week|Special Event|January|http://www.buro247.sg/thumb/1000x700/local/images/buro/galleries/2017/11/Kanmani-Melissa-Quek-x-Tinu-Verghis-Singapore-Tourism-Board-saw2018-buro247.sg.jpg
-National Day|Public Holiday|9 August|https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gibraltar_National_Day_028_%289716508171%29_%282%29.jpg/1200px-Gibraltar_National_Day_028_%289716508171%29_%282%29.jpg
-Hari Raya Haji|Public Holiday|22 August|http://astrokentico.s3.amazonaws.com/rojakdaily/media/nicholas/hari%20raya%20open%20house/main.jpg
-Formula One|Special Event|16 September|https://i.hungrygowhere.com/cms/13/08/d9/6e/159604/sgp_400x300_24bfaa4a29.jpg
-Singapore Airshow|SAF Event|During month of February biennially|https://updatelink.com/plsupdatelink.png
-Singapore Food Festival|Event|13 July- 29 July|https://updatelink.com/plsupdatelink.png
-Hungry Ghost Festival|Unintrusive Event|11 August - 9 September|https://www.tcb.com.sg/wp-content/uploads/2016/08/Hungy-Ghost-Festival-superstitions-taboo.jpg
-Mid Autumn Festival|Special Event|24 September|https://images.myguide-cdn.com/singapore/blog/mid-autumn-festival-in-singapore/large/mid-autumn-festival-in-singapore-194198.jpg
+Singapore Art Week|Special Event|January
+National Day|Public Holiday|9 August
+Hari Raya Haji|Public Holiday|22 August
+Formula One|Special Event|16 September
+Singapore Airshow|SAF Event|February, Once Every 2 Years
+Singapore Food Festival|Event|13 July- 29 July
+Hungry Ghost Festival|Unintrusive Event|11 August - 9 September
+Mid Autumn Festival|Special Event|24 September
