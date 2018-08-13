@@ -47,10 +47,18 @@ class ViewController_Directions: UIViewController {  // Subview of maps
         
         super.viewDidLoad()
         
-        locationManager.requestAlwaysAuthorization()
+        // Setup location manager
         locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         locationManager.startUpdatingLocation()
+        
+        // Test for network
+        if !Reachability.isConnectedToNetwork()  // If cannot connect to internet
+        {
+            print("Cannot reach directional servers.")
+            self.label_directions.text = "Direction assistant offline. Please refresh after enabling internet access to continue."
+        }
     }
 
     func getDirections(to destination: MKMapItem) {
@@ -59,7 +67,7 @@ class ViewController_Directions: UIViewController {  // Subview of maps
         self.speechSynthesizer.stopSpeaking(at: .immediate)
         
         // Get locations
-        print("GETTING LOCATIONS")
+        print("Getting locations")
         let sourcePlacemark = MKPlacemark(coordinate: currentCoordinate)
         let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
         
@@ -68,7 +76,7 @@ class ViewController_Directions: UIViewController {  // Subview of maps
         directionsRequest.destination = destination
         
         // Update the type according to the segment index
-        print("UPDATING TRANSPORTTYPE")
+        print("Updating transport type")
         if segmentIndex == 0 {
             directionsRequest.transportType = .automobile
         } else if segmentIndex == 1 {
@@ -80,7 +88,7 @@ class ViewController_Directions: UIViewController {  // Subview of maps
         }
         
         // Calculate directions
-        print("CALCULATING DIRECTIONS")
+        print("Calculate directions")
         let directions = MKDirections(request: directionsRequest)
         directions.calculate { (response, _) in
             guard let response = response else
@@ -120,12 +128,12 @@ class ViewController_Directions: UIViewController {  // Subview of maps
             }
             
             // UPDATE MESSAGE
-            print("UPDATING MESSAGE")
             let initialMessage = "In \(self.steps[0].distance) meters, \(self.steps[0].instructions). Then in \(self.steps[1].distance) meters, \(self.steps[1].instructions)."
             self.label_directions.text = initialMessage  // Let the message be parsed first before setting it to be the label's text
             let speechUtterance = AVSpeechUtterance(string: initialMessage)  // Make the phone speak
             self.speechSynthesizer.speak(speechUtterance)
             self.stepCounter += 1
+            print("Updated message")
             
         }
     }
@@ -163,18 +171,21 @@ extension ViewController_Directions: CLLocationManagerDelegate {
 
 extension ViewController_Directions: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("ENTERED")
         searchBar.endEditing(true)  // Removes search bar
+        
         let localSearchRequest = MKLocalSearchRequest()
         localSearchRequest.naturalLanguageQuery = searchBar.text
+        print("Entered search query")
+        
         let region = MKCoordinateRegion(center: currentCoordinate, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        
         localSearchRequest.region = region
         let localSearch = MKLocalSearch(request: localSearchRequest)
         
-        print("STARTING LOCAL SEARCH")
+        print("Starting local search")
         localSearch.start { (response, _) in
             guard let response = response else { return }
-            print("RESPONSE GOTTEN")
+            print("Got response")
             guard let firstMapItem = response.mapItems.first else { return }
             self.getDirections(to: firstMapItem)
         }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+class EventCell: UICollectionViewCell {  // For each event
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var eventType: UILabel!
     @IBOutlet weak var eventDate: UILabel!

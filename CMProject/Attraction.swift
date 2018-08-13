@@ -12,21 +12,25 @@ import Contacts
 
 class Attraction: NSObject, MKAnnotation {
     let title: String?
+    let shortDesc: String
     let locationDetail: String
     let locationType: String
     let coordinate: CLLocationCoordinate2D
+    let imageCredit: String
     
-    init(title: String, locationDetail:String, locationType: String, coordinate: CLLocationCoordinate2D) {
+    init(title: String, shortDesc: String, locationDetail:String, locationType: String, coordinate: CLLocationCoordinate2D, imageCredits: String) {
         self.title = title
+        self.shortDesc = shortDesc
         self.locationDetail = locationDetail
         self.locationType = locationType
         self.coordinate = coordinate
+        self.imageCredit = imageCredits
         
         super.init()
     }
     
     var subtitle: String? {
-        return locationDetail
+        return shortDesc
     }
     var markerTintColor: UIColor  {
         switch locationType {
@@ -41,15 +45,6 @@ class Attraction: NSObject, MKAnnotation {
         default:
             return .cyan  // Default but will never be used
         }
-    }
-    
-    func mapItem() -> MKMapItem {  // AKA Pins
-        let addressDict = [CNPostalAddressStreetKey: subtitle!]
-        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDict)
-        let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = title
-        
-        return mapItem
     }
     
     var imageName: String? {

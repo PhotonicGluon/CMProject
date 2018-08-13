@@ -1,9 +1,9 @@
-TITLE|EVENT_TYPE|DATE|IMAGE
+TITLE|EVENT_TYPE|DATE
 Singapore Art Week|Special Event|January
-National Day|Public Holiday|9 August
-Hari Raya Haji|Public Holiday|22 August
-Formula One|Special Event|16 September
-Singapore Airshow|SAF Event|February, Once Every 2 Years
-Singapore Food Festival|Event|13 July- 29 July
-Hungry Ghost Festival|Unintrusive Event|11 August - 9 September
-Mid Autumn Festival|Special Event|24 September
+National Day|Public Holiday|09/08
+Hari Raya Haji|Public Holiday|22/08
+Formula One|Special Event|16/09
+Singapore Airshow|SAF Event|February
+Singapore Food Festival|Event|13/07 - 29/07
+Hungry Ghost Festival|Unintrusive Event|11/08 - 09/09
+Mid Autumn Festival|Special Event|24/09

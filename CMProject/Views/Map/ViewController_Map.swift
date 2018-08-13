@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import Contacts
 
-class ViewController_Map: UIViewController, MKMapViewDelegate {
+class ViewController_Map: UIViewController {
     // Inputs
     
     // Outputs
@@ -41,7 +41,7 @@ class ViewController_Map: UIViewController, MKMapViewDelegate {
         mapKitView.delegate = self
         mapKitView.register(AttractionMarkerView.self,
                                  forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-        
+
         print("MARK: Gathering data")
         let path = Bundle.main.path(forResource: "SGTouristLoc", ofType: "txt")
         
@@ -53,20 +53,22 @@ class ViewController_Map: UIViewController, MKMapViewDelegate {
             
             for i in 1..<readings.count-1
             {
-                let attractionData = readings[i].components(separatedBy: "|")  // Because we can't use ","
+                let attractionData = readings[i].components(separatedBy: "|")  // Because we can't use ",", therefore "|"
                 
                 let title = attractionData[0]
-                let locationDetail = attractionData[1]
-                let locationType = attractionData[2]
+                let locationType = attractionData[1]
                 var location:CLLocationCoordinate2D
-                if let latitude = Double(attractionData[3]), let longitude = Double(attractionData[4])
+                if let latitude = Double(attractionData[2]), let longitude = Double(attractionData[3])
                 {
                     location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
                 } else {
                     location = CLLocationCoordinate2D()
                 }
+                let shortDesc = attractionData[4]
+                let locationDetail = attractionData[5]
+                let imageCredit = attractionData[6]
                 
-                attractions.append(Attraction(title: title, locationDetail: locationDetail, locationType: locationType, coordinate: location))
+                attractions.append(Attraction(title: title, shortDesc: shortDesc, locationDetail: locationDetail, locationType: locationType, coordinate: location, imageCredits: imageCredit))
             }
         }
         
@@ -104,6 +106,22 @@ class ViewController_Map: UIViewController, MKMapViewDelegate {
 }
 
 
+extension ViewController_Map: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
+                 calloutAccessoryControlTapped control: UIControl) {  // When the button is tapped, this function will trigger
+        let location = view.annotation as! Attraction
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "ExtraDetail") as! ViewController_ExtraDetail
+        
+        newViewController.attractionTitle = location.title!
+        newViewController.attractionImage = UIImage(named: location.title!)
+        newViewController.attractionDetail = location.locationDetail
+        newViewController.imageCredits = location.imageCredit
+        
+        self.navigationController?.pushViewController(newViewController, animated: true)
+    }
+}
 
 extension UIViewController {   // Create a spinning loading wheel
     class func displaySpinner(onView : UIView) -> UIView {

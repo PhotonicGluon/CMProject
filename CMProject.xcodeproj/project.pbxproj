@@ -18,6 +18,7 @@
 		223B1F8B20F0AB5900791DEE /* Singapore, Singapore.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 223B1F8A20F0AB5900791DEE /* Singapore, Singapore.gpx */; };
 		2249E50F20F1CA66006A94B2 /* SGTouristLoc.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2249E50E20F1CA66006A94B2 /* SGTouristLoc.txt */; };
 		2249E51120F1D037006A94B2 /* CMProject-NoImageDetected.png in Resources */ = {isa = PBXBuildFile; fileRef = 2249E51020F1D037006A94B2 /* CMProject-NoImageDetected.png */; };
+		2254B8572121B7C1007047CB /* ViewController_ExtraDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254B8562121B7C1007047CB /* ViewController_ExtraDetail.swift */; };
 		227727D920E7992E00210BD9 /* ViewController_Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227727D820E7992E00210BD9 /* ViewController_Credits.swift */; };
 		227A5DC120F0EECC00E59520 /* Attraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227A5DC020F0EECC00E59520 /* Attraction.swift */; };
 		227A5DC820F0F89900E59520 /* AttractionMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227A5DC720F0F89900E59520 /* AttractionMarkerView.swift */; };
@@ -28,7 +29,6 @@
 		228907792111EBCA00BFD127 /* Marina Barage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2289075D2111EBC800BFD127 /* Marina Barage.png */; };
 		2289077A2111EBCA00BFD127 /* Statue of Sir Stamford Raffles.png in Resources */ = {isa = PBXBuildFile; fileRef = 2289075E2111EBC800BFD127 /* Statue of Sir Stamford Raffles.png */; };
 		2289077B2111EBCA00BFD127 /* Downtown East.png in Resources */ = {isa = PBXBuildFile; fileRef = 2289075F2111EBC800BFD127 /* Downtown East.png */; };
-		2289077C2111EBCA00BFD127 /* Unknown (Helix Bridge?).png in Resources */ = {isa = PBXBuildFile; fileRef = 228907602111EBC800BFD127 /* Unknown (Helix Bridge?).png */; };
 		2289077D2111EBCA00BFD127 /* Marina Bay Sands.png in Resources */ = {isa = PBXBuildFile; fileRef = 228907612111EBC800BFD127 /* Marina Bay Sands.png */; };
 		2289077E2111EBCA00BFD127 /* Botanical Gardens.png in Resources */ = {isa = PBXBuildFile; fileRef = 228907622111EBC800BFD127 /* Botanical Gardens.png */; };
 		2289077F2111EBCA00BFD127 /* Singapore Art Museum.png in Resources */ = {isa = PBXBuildFile; fileRef = 228907632111EBC800BFD127 /* Singapore Art Museum.png */; };
@@ -46,12 +46,14 @@
 		2289078B2111EBCA00BFD127 /* Harbourfront.png in Resources */ = {isa = PBXBuildFile; fileRef = 2289076F2111EBC900BFD127 /* Harbourfront.png */; };
 		2289078C2111EBCA00BFD127 /* Jurong Bird Park.png in Resources */ = {isa = PBXBuildFile; fileRef = 228907702111EBCA00BFD127 /* Jurong Bird Park.png */; };
 		2289078D2111EBCA00BFD127 /* Sentosa.png in Resources */ = {isa = PBXBuildFile; fileRef = 228907712111EBCA00BFD127 /* Sentosa.png */; };
-		2289078E2111EBCA00BFD127 /* Unknown (St Theresa Church?).png in Resources */ = {isa = PBXBuildFile; fileRef = 228907722111EBCA00BFD127 /* Unknown (St Theresa Church?).png */; };
 		2289078F2111EBCA00BFD127 /* Gardens By The Bay.png in Resources */ = {isa = PBXBuildFile; fileRef = 228907732111EBCA00BFD127 /* Gardens By The Bay.png */; };
 		228907902111EBCA00BFD127 /* Malay Heritage Centre.png in Resources */ = {isa = PBXBuildFile; fileRef = 228907742111EBCA00BFD127 /* Malay Heritage Centre.png */; };
 		228B4C1720F48D6000EF0661 /* SGTouristEvents.txt in Resources */ = {isa = PBXBuildFile; fileRef = 228B4C1620F48D6000EF0661 /* SGTouristEvents.txt */; };
-		228B4C2A20F4EB8100EF0661 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B4C2920F4EB8100EF0661 /* CollectionViewCell.swift */; };
+		228B4C2A20F4EB8100EF0661 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B4C2920F4EB8100EF0661 /* EventCell.swift */; };
 		228B4C2C20F4EC4600EF0661 /* ViewController_Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B4C2B20F4EC4600EF0661 /* ViewController_Events.swift */; };
+		22F895A92112BB2D00DC8E38 /* Cathedral Of The Good Shepherd.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F895A72112BB2D00DC8E38 /* Cathedral Of The Good Shepherd.png */; };
+		22F895AC2112BB4200DC8E38 /* Helix Bridge.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F895AB2112BB4200DC8E38 /* Helix Bridge.png */; };
+		22F895AE2112BCAA00DC8E38 /* NetworkTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F895AD2112BCAA00DC8E38 /* NetworkTester.swift */; };
 		22FDC0A920E2798F00258319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FDC0A820E2798F00258319 /* AppDelegate.swift */; };
 		22FDC0AE20E2798F00258319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FDC0AC20E2798F00258319 /* Main.storyboard */; };
 		22FDC0B020E2799200258319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22FDC0AF20E2799200258319 /* Assets.xcassets */; };
@@ -70,6 +72,7 @@
 		223B1F8A20F0AB5900791DEE /* Singapore, Singapore.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Singapore, Singapore.gpx"; sourceTree = "<group>"; };
 		2249E50E20F1CA66006A94B2 /* SGTouristLoc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SGTouristLoc.txt; sourceTree = "<group>"; };
 		2249E51020F1D037006A94B2 /* CMProject-NoImageDetected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CMProject-NoImageDetected.png"; sourceTree = "<group>"; };
+		2254B8562121B7C1007047CB /* ViewController_ExtraDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_ExtraDetail.swift; sourceTree = "<group>"; };
 		227727D820E7992E00210BD9 /* ViewController_Credits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Credits.swift; sourceTree = "<group>"; };
 		227A5DC020F0EECC00E59520 /* Attraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attraction.swift; sourceTree = "<group>"; };
 		227A5DC720F0F89900E59520 /* AttractionMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionMarkerView.swift; sourceTree = "<group>"; };
@@ -80,7 +83,6 @@
 		2289075D2111EBC800BFD127 /* Marina Barage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marina Barage.png"; sourceTree = "<group>"; };
 		2289075E2111EBC800BFD127 /* Statue of Sir Stamford Raffles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Statue of Sir Stamford Raffles.png"; sourceTree = "<group>"; };
 		2289075F2111EBC800BFD127 /* Downtown East.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Downtown East.png"; sourceTree = "<group>"; };
-		228907602111EBC800BFD127 /* Unknown (Helix Bridge?).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Unknown (Helix Bridge?).png"; sourceTree = "<group>"; };
 		228907612111EBC800BFD127 /* Marina Bay Sands.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marina Bay Sands.png"; sourceTree = "<group>"; };
 		228907622111EBC800BFD127 /* Botanical Gardens.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Botanical Gardens.png"; sourceTree = "<group>"; };
 		228907632111EBC800BFD127 /* Singapore Art Museum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Singapore Art Museum.png"; sourceTree = "<group>"; };
@@ -98,12 +100,14 @@
 		2289076F2111EBC900BFD127 /* Harbourfront.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Harbourfront.png; sourceTree = "<group>"; };
 		228907702111EBCA00BFD127 /* Jurong Bird Park.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Jurong Bird Park.png"; sourceTree = "<group>"; };
 		228907712111EBCA00BFD127 /* Sentosa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sentosa.png; sourceTree = "<group>"; };
-		228907722111EBCA00BFD127 /* Unknown (St Theresa Church?).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Unknown (St Theresa Church?).png"; sourceTree = "<group>"; };
 		228907732111EBCA00BFD127 /* Gardens By The Bay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gardens By The Bay.png"; sourceTree = "<group>"; };
 		228907742111EBCA00BFD127 /* Malay Heritage Centre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Malay Heritage Centre.png"; sourceTree = "<group>"; };
 		228B4C1620F48D6000EF0661 /* SGTouristEvents.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SGTouristEvents.txt; sourceTree = "<group>"; };
-		228B4C2920F4EB8100EF0661 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		228B4C2920F4EB8100EF0661 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		228B4C2B20F4EC4600EF0661 /* ViewController_Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Events.swift; sourceTree = "<group>"; };
+		22F895A72112BB2D00DC8E38 /* Cathedral Of The Good Shepherd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cathedral Of The Good Shepherd.png"; sourceTree = "<group>"; };
+		22F895AB2112BB4200DC8E38 /* Helix Bridge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Helix Bridge.png"; sourceTree = "<group>"; };
+		22F895AD2112BCAA00DC8E38 /* NetworkTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTester.swift; sourceTree = "<group>"; };
 		22FDC0A520E2798F00258319 /* CMProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CMProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22FDC0A820E2798F00258319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22FDC0AD20E2798F00258319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 				2223FC5E21047FC200D8E317 /* ViewController_ContainerMap.swift */,
 				22365A8120FA301300B20B37 /* ViewController_Directions.swift */,
 				2223FC662104BCE700D8E317 /* ViewController_ContainerHamburger.swift */,
+				2254B8562121B7C1007047CB /* ViewController_ExtraDetail.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				228907622111EBC800BFD127 /* Botanical Gardens.png */,
+				22F895A72112BB2D00DC8E38 /* Cathedral Of The Good Shepherd.png */,
 				228907642111EBC800BFD127 /* Chinatown.png */,
 				2289076D2111EBC900BFD127 /* Clake Quay.png */,
 				2289075F2111EBC800BFD127 /* Downtown East.png */,
@@ -219,6 +225,7 @@
 				228907732111EBCA00BFD127 /* Gardens By The Bay.png */,
 				228907672111EBC900BFD127 /* Har Paw Villa.png */,
 				2289076F2111EBC900BFD127 /* Harbourfront.png */,
+				22F895AB2112BB4200DC8E38 /* Helix Bridge.png */,
 				228907702111EBCA00BFD127 /* Jurong Bird Park.png */,
 				228907742111EBCA00BFD127 /* Malay Heritage Centre.png */,
 				2289075D2111EBC800BFD127 /* Marina Barage.png */,
@@ -235,8 +242,6 @@
 				2289075E2111EBC800BFD127 /* Statue of Sir Stamford Raffles.png */,
 				2289076B2111EBC900BFD127 /* Sungei Buloh.png */,
 				2289075A2111EBC800BFD127 /* Universal Studios Singapore.png */,
-				228907602111EBC800BFD127 /* Unknown (Helix Bridge?).png */,
-				228907722111EBCA00BFD127 /* Unknown (St Theresa Church?).png */,
 			);
 			path = AttractionImages;
 			sourceTree = "<group>";
@@ -264,7 +269,7 @@
 				2249E50E20F1CA66006A94B2 /* SGTouristLoc.txt */,
 				228B4C1620F48D6000EF0661 /* SGTouristEvents.txt */,
 				227A5DC720F0F89900E59520 /* AttractionMarkerView.swift */,
-				228B4C2920F4EB8100EF0661 /* CollectionViewCell.swift */,
+				228B4C2920F4EB8100EF0661 /* EventCell.swift */,
 				227A5DC020F0EECC00E59520 /* Attraction.swift */,
 				223B1F8020F0A77E00791DEE /* Resources */,
 				2227627C20E49BE60043320A /* Views */,
@@ -273,6 +278,7 @@
 				22FDC0AF20E2799200258319 /* Assets.xcassets */,
 				22FDC0B120E2799200258319 /* LaunchScreen.storyboard */,
 				22FDC0B420E2799200258319 /* Info.plist */,
+				22F895AD2112BCAA00DC8E38 /* NetworkTester.swift */,
 			);
 			path = CMProject;
 			sourceTree = "<group>";
@@ -345,8 +351,8 @@
 			files = (
 				22FDC0B320E2799200258319 /* LaunchScreen.storyboard in Resources */,
 				228907842111EBCA00BFD127 /* River Safari.png in Resources */,
-				2289078E2111EBCA00BFD127 /* Unknown (St Theresa Church?).png in Resources */,
 				228907902111EBCA00BFD127 /* Malay Heritage Centre.png in Resources */,
+				22F895A92112BB2D00DC8E38 /* Cathedral Of The Good Shepherd.png in Resources */,
 				2289077B2111EBCA00BFD127 /* Downtown East.png in Resources */,
 				2289077F2111EBCA00BFD127 /* Singapore Art Museum.png in Resources */,
 				2289078C2111EBCA00BFD127 /* Jurong Bird Park.png in Resources */,
@@ -364,7 +370,6 @@
 				228907812111EBCA00BFD127 /* Mount Faber.png in Resources */,
 				223B1F8B20F0AB5900791DEE /* Singapore, Singapore.gpx in Resources */,
 				223B1F8520F0A7B400791DEE /* CMProject-Icon.png in Resources */,
-				2289077C2111EBCA00BFD127 /* Unknown (Helix Bridge?).png in Resources */,
 				228907802111EBCA00BFD127 /* Chinatown.png in Resources */,
 				2289077A2111EBCA00BFD127 /* Statue of Sir Stamford Raffles.png in Resources */,
 				22FDC0B020E2799200258319 /* Assets.xcassets in Resources */,
@@ -372,6 +377,7 @@
 				2289078F2111EBCA00BFD127 /* Gardens By The Bay.png in Resources */,
 				2249E51120F1D037006A94B2 /* CMProject-NoImageDetected.png in Resources */,
 				228907762111EBCA00BFD127 /* Universal Studios Singapore.png in Resources */,
+				22F895AC2112BB4200DC8E38 /* Helix Bridge.png in Resources */,
 				228907792111EBCA00BFD127 /* Marina Barage.png in Resources */,
 				22FDC0AE20E2798F00258319 /* Main.storyboard in Resources */,
 				2289078A2111EBCA00BFD127 /* Singapore Flyer.png in Resources */,
@@ -395,12 +401,14 @@
 				22365A8220FA301300B20B37 /* ViewController_Directions.swift in Sources */,
 				2223FC672104BCE700D8E317 /* ViewController_ContainerHamburger.swift in Sources */,
 				227727D920E7992E00210BD9 /* ViewController_Credits.swift in Sources */,
+				2254B8572121B7C1007047CB /* ViewController_ExtraDetail.swift in Sources */,
 				2227628020E49BF00043320A /* ViewController_Map.swift in Sources */,
-				228B4C2A20F4EB8100EF0661 /* CollectionViewCell.swift in Sources */,
+				228B4C2A20F4EB8100EF0661 /* EventCell.swift in Sources */,
 				22FDC0A920E2798F00258319 /* AppDelegate.swift in Sources */,
 				227A5DC120F0EECC00E59520 /* Attraction.swift in Sources */,
 				227A5DC820F0F89900E59520 /* AttractionMarkerView.swift in Sources */,
 				2223FC5F21047FC200D8E317 /* ViewController_ContainerMap.swift in Sources */,
+				22F895AE2112BCAA00DC8E38 /* NetworkTester.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

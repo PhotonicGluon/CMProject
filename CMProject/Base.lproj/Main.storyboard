@@ -94,7 +94,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="KbI-zy-JeD" customClass="CollectionViewCell" customModule="CMProject" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="KbI-zy-JeD" customClass="EventCell" customModule="CMProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="307"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -222,6 +222,7 @@
                     <connections>
                         <outlet property="constraint_sideMenu" destination="Y3S-U4-h22" id="S3Y-kQ-r4K"/>
                         <segue destination="oYG-Lv-jAE" kind="show" identifier="ShowDirections" id="X4f-qq-Iug"/>
+                        <segue destination="qAe-J6-rWg" kind="show" identifier="ShowDetail" id="cPD-po-AdM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jrH-xD-OSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -290,7 +291,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Dz-f1-WuK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3216" y="133"/>
+            <point key="canvasLocation" x="3191" y="-384"/>
+        </scene>
+        <!--Extra Details-->
+        <scene sceneID="EBK-ew-Unl">
+            <objects>
+                <viewController storyboardIdentifier="ExtraDetail" title="Extra Details" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qAe-J6-rWg" customClass="ViewController_ExtraDetail" customModule="CMProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g8U-Q8-81c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CMProject-MainBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="wf7-BF-zH9">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MgT-vc-sMh">
+                                <rect key="frame" x="20" y="89" width="374" height="223"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZHi-Kl-Oa1">
+                                <rect key="frame" x="20" y="358" width="374" height="358"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Image by Lorem ipsum dolor sit er elit" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TC7-xD-jTq">
+                                <rect key="frame" x="20" y="320" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="iXc-xQ-cFy"/>
+                    </view>
+                    <connections>
+                        <outlet property="img_attractionImg" destination="MgT-vc-sMh" id="eCr-SS-LHy"/>
+                        <outlet property="label_imgCredit" destination="TC7-xD-jTq" id="dy2-Eu-1xO"/>
+                        <outlet property="txt_attractionDetail" destination="ZHi-Kl-Oa1" id="0qs-3W-EGh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UCr-XU-Sk1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3189.8550724637685" y="413.31521739130437"/>
         </scene>
         <!--View Controller Credits-->
         <scene sceneID="kJ8-Kj-9bk">
@@ -314,8 +361,8 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSQ-Ld-xiQ">
                                 <rect key="frame" x="1" y="129" width="414" height="607"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Main Menu Image by Pintrest (HandLuggageOnly) - https://bit.ly/2lU0tVO  Location Data retreved from Wikipedia: https://en.wikipedia.org/wiki/Main_Page</string>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Main Menu Image by Pintrest (HandLuggageOnly) - https://bit.ly/2lU0tVO  Location Data retreved from Wikipedia: https://en.wikipedia.org/wiki/Main_Page  Location images: Botanical Gardens by Cathedral Of The Good Shepherd by Chinatown by Clarke Quay by Downtown East by Esplanade Theatre by Fort Canning Park by Fountain of Wealth by Gardens By The Bay by Har Paw Villa by Harbourfront by Helix Bridge by Jurong bird Park by Malay Heritage Centre by Marina Barrage by Marina Bay Sands by Merlion by Mount Faber by Orchard Road by River Safary by Sentosa by Singapore Art Museum by Singapore Flyer by Singapore River by Singapore Zoo by Statue of Sir Stamford Raffles by Sungei Buloh by Universal Studios Singapore by </string>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

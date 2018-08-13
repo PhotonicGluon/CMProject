@@ -42,7 +42,6 @@ class ViewController_Events: UIViewController, UICollectionViewDataSource, UICol
                 dictEvents["Title"] = "\(eventData[0])"
                 dictEvents["Event_Type"] = "\(eventData[1])"
                 dictEvents["Event_Date"] = "\(eventData[2])"
-                dictEvents["Image"] = "\(eventData[3])"
                 
                 arrayEvents.add(dictEvents)
             }
@@ -64,7 +63,7 @@ class ViewController_Events: UIViewController, UICollectionViewDataSource, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! EventCell
         let cellContents = arrayEvents[indexPath.item] as! [String: String]
         
         cell.eventTitle.text = cellContents["Title"]

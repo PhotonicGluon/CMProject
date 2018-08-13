@@ -10,8 +10,8 @@ import Foundation
 import MapKit
 //import FileProvider
 
-let ATTRACTION_IMAGE_SIZE = 128
-let MAP_BTN_IMG_SIZE = 32
+let ATTRACTION_IMAGE_SIZE = 64
+let ATTRACTION_DETAIL_FONT_SIZE = 10
 
 class AttractionMarkerView: MKMarkerAnnotationView {  // The things that will be shown when the attraction pin is tapped
     override var annotation: MKAnnotation? {
@@ -27,10 +27,10 @@ class AttractionMarkerView: MKMarkerAnnotationView {  // The things that will be
             
             if let img = UIImage(named: attraction.title!)  // The title is the same as the image name
             {
-                attractionImgDisplay.image = img
+                attractionImgDisplay.image = img  // Load the image
             } else {
-                print("Error: \(attraction.title!) image cannot be loaded.")
-                attractionImgDisplay.image = #imageLiteral(resourceName: "CMProject-NoImageDetected.png")
+                print("Error: \(attraction.title!)'s image cannot be loaded.")
+                attractionImgDisplay.image = #imageLiteral(resourceName: "CMProject-NoImageDetected.png")  // The "No-Image" image file
             }
             
             leftCalloutAccessoryView = attractionImgDisplay
@@ -49,9 +49,16 @@ class AttractionMarkerView: MKMarkerAnnotationView {  // The things that will be
             // Detail label
             let detailLabel = UILabel()
             detailLabel.numberOfLines = 0
-            detailLabel.font = detailLabel.font.withSize(12)
-            detailLabel.text = attraction.subtitle
+            
+            let formattedText = attraction.subtitle!.replacingOccurrences(of: "\\n", with: "\n")  // Correctly format text with linebreaks
+            
+            detailLabel.text = formattedText
+            detailLabel.font = detailLabel.font.withSize(CGFloat(ATTRACTION_DETAIL_FONT_SIZE))
             detailCalloutAccessoryView = detailLabel
+            
+            // More details button
+            let mapsButton = UIButton(type: .detailDisclosure)
+            rightCalloutAccessoryView = mapsButton
         }
     }
 }

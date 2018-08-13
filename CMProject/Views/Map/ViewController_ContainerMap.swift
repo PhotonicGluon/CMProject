@@ -18,19 +18,17 @@ class ViewController_ContainerMap: UIViewController {  // This is to store the a
     let ANIMATION_DURATION = 0.2
     var hamburgerMenuOpen = false
     
-    var seguePrepDebounce:Bool = true
-    var segueDebounceCount:Int = 0
-    
     // Func
     @objc func toggleHamburgerMenu()
     {
-        print("Toggled hamburger menu")
         if hamburgerMenuOpen == false
         {
+            print("Opened Hamburger Menu")
             constraint_sideMenu.constant = 0
         }
         else  // Then it must be true
         {
+            print("Closed Hamburger Menu")
             constraint_sideMenu.constant = -182
         }
         hamburgerMenuOpen = !hamburgerMenuOpen  // Invert the state
