@@ -172,6 +172,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		222765852123158700C52CCF /* MiscImages */ = {
+			isa = PBXGroup;
+			children = (
+				2249E51020F1D037006A94B2 /* CMProject-NoImageDetected.png */,
+				223B1F8320F0A7B400791DEE /* CMProject-Icon.png */,
+				223B1F8220F0A7B300791DEE /* CMProject-MainBG.png */,
+			);
+			path = MiscImages;
+			sourceTree = "<group>";
+		};
 		22365A8320FA306500B20B37 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,10 +202,8 @@
 		223B1F8120F0A79000791DEE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				222765852123158700C52CCF /* MiscImages */,
 				22F0BA9E21113A4800E9A1AE /* AttractionImages */,
-				2249E51020F1D037006A94B2 /* CMProject-NoImageDetected.png */,
-				223B1F8320F0A7B400791DEE /* CMProject-Icon.png */,
-				223B1F8220F0A7B300791DEE /* CMProject-MainBG.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
