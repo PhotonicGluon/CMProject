@@ -11,9 +11,9 @@ import MapKit
 //import FileProvider
 
 let ATTRACTION_IMAGE_SIZE = 64
-let ATTRACTION_DETAIL_FONT_SIZE = 10
+let ATTRACTION_DETAIL_FONT_SIZE = 14
 let DETAIL_WIDTH = 250
-let DETAIL_HEIGHT = 100
+let DETAIL_HEIGHT = 200
 
 class AttractionMarkerView: MKMarkerAnnotationView {  // The things that will be shown when the attraction pin is tapped
     var detailData: NSDictionary = [:]
@@ -56,10 +56,10 @@ class AttractionMarkerView: MKMarkerAnnotationView {  // The things that will be
             }
             
             // Detail callout
-            let snapshotView = UIView()
-            let views = ["snapshotView": snapshotView]
-            snapshotView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[snapshotView(\(DETAIL_WIDTH))]", options: [], metrics: nil, views: views))
-            snapshotView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[snapshotView(\(DETAIL_HEIGHT))]", options: [], metrics: nil, views: views))
+            let detailCalloutView = UIView()
+            let views = ["snapshotView": detailCalloutView]
+            detailCalloutView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[snapshotView(\(DETAIL_WIDTH))]", options: [], metrics: nil, views: views))
+            detailCalloutView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[snapshotView(\(DETAIL_HEIGHT))]", options: [], metrics: nil, views: views))
             
             // Configure More Info
             let detailsButton = UIButton(frame: CGRect(x: 0, y: DETAIL_HEIGHT - 35, width: DETAIL_WIDTH / 2 - 5, height: 35))
@@ -89,12 +89,12 @@ class AttractionMarkerView: MKMarkerAnnotationView {  // The things that will be
             detailLabel.font = detailLabel.font.withSize(CGFloat(ATTRACTION_DETAIL_FONT_SIZE))
             
             // Adding items to view
-            snapshotView.addSubview(detailLabel)
-            snapshotView.addSubview(detailsButton)
-            snapshotView.addSubview(directionsButton)
+            detailCalloutView.addSubview(detailLabel)
+            detailCalloutView.addSubview(detailsButton)
+            detailCalloutView.addSubview(directionsButton)
             
             // Set accessory
-            detailCalloutAccessoryView = snapshotView
+            detailCalloutAccessoryView = detailCalloutView
         }
     }
     // Listener functions
