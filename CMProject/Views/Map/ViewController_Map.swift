@@ -10,20 +10,20 @@ import UIKit
 import MapKit
 import Contacts
 
-class ViewController_Map: UIViewController {
-    // Inputs
+class ViewController_Map: UIViewController, MKMapViewDelegate {
+    // MARK: Inputs
     
-    // Outputs
+    // MARK: Outputs
     @IBOutlet weak var mapKitView: MKMapView!
     
-    // Variables
+    // MARK: Variables
     var attractions: [Attraction] = []  // Create an array which ONLY accepts Attraction objects
-    let regionRadius: CLLocationDistance = 20000  // Set the view to regionRadius metres
-    let initialLocation = CLLocation(latitude: 1.313251, longitude: 103.774345)  // SST ;)
+    let regionRadius: CLLocationDistance = 25000  // Set the view to regionRadius metres
+    let initialLocation = CLLocation(latitude: 1.3521, longitude: 103.8198)  // Center of SG
     
-    var hamburgerMenuVisible = false
+    var passedData:NSArray = []
     
-    // Func
+    // MARK: Func
     func centerMapOnLocation(location: CLLocation)
     {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
@@ -31,13 +31,53 @@ class ViewController_Map: UIViewController {
         mapKitView.setRegion(coordinateRegion, animated: true)
     }
     
+    // Prepare movement functions
+    func catchData(notification: Notification) -> Void
+    {
+        if notification.userInfo!.count == 1  // Only applies to directions
+        {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "Directions") as! ViewController_Directions
+
+            let userInfo = notification.userInfo! as! [String: String]
+            
+            guard let title = userInfo["title"] else { print("No title"); return }
+            
+            newViewController.locationTitle = title
+            
+            self.navigationController?.pushViewController(newViewController, animated: true)
+        }
+        else  // Only applies to detail
+        {
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "ExtraDetail") as! ViewController_ExtraDetail
+            
+            let userInfo = notification.userInfo! as! [String: String]
+            
+            guard let title = userInfo["title"] else { print("No title"); return }
+            guard let detail = userInfo["detail"] else { print("No detail"); return }
+            guard let credits = userInfo["credit"] else { print("No image"); return }
+
+            newViewController.attractionTitle = title
+            newViewController.attractionImage = UIImage(named: title)
+            newViewController.attractionDetail = detail
+            newViewController.imageCredits = credits
+            
+            self.navigationController?.pushViewController(newViewController, animated: true)
+
+        }
+    }
     
     override func viewDidLoad() {
         print()
         print("LOADING 'MAP' VIEW CONTROLLER")
         self.title = "Map"
         super.viewDidLoad()
-
+        // Create listeners
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("MoveToDetail"), object: nil, queue: nil, using: catchData)
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("MoveToDirections"), object: nil, queue: nil, using: catchData)
+        
+        // Setup delegate for map
         mapKitView.delegate = self
         mapKitView.register(AttractionMarkerView.self,
                                  forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
@@ -53,7 +93,7 @@ class ViewController_Map: UIViewController {
             
             for i in 1..<readings.count-1
             {
-                let attractionData = readings[i].components(separatedBy: "|")  // Because we can't use ",", therefore "|"
+                let attractionData = readings[i].components(separatedBy: "|")  // Because we can't use ",", therefore "|" has to do
                 
                 let title = attractionData[0]
                 let locationType = attractionData[1]
@@ -105,23 +145,6 @@ class ViewController_Map: UIViewController {
 
 }
 
-
-extension ViewController_Map: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
-                 calloutAccessoryControlTapped control: UIControl) {  // When the button is tapped, this function will trigger
-        let location = view.annotation as! Attraction
-        
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "ExtraDetail") as! ViewController_ExtraDetail
-        
-        newViewController.attractionTitle = location.title!
-        newViewController.attractionImage = UIImage(named: location.title!)
-        newViewController.attractionDetail = location.locationDetail
-        newViewController.imageCredits = location.imageCredit
-        
-        self.navigationController?.pushViewController(newViewController, animated: true)
-    }
-}
 
 extension UIViewController {   // Create a spinning loading wheel
     class func displaySpinner(onView : UIView) -> UIView {

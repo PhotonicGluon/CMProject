@@ -24,6 +24,9 @@ class ViewController_ExtraDetail: UIViewController {
     
     // Func
     override func viewDidLoad() {
+        print()
+        print("LOADING 'DETAILS' SUBVIEW")
+        
         self.title = attractionTitle!
         
         img_attractionImg.layer.cornerRadius = 8.0

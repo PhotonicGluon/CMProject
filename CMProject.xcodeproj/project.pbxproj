@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2223FC5F21047FC200D8E317 /* ViewController_ContainerMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223FC5E21047FC200D8E317 /* ViewController_ContainerMap.swift */; };
 		2223FC672104BCE700D8E317 /* ViewController_ContainerHamburger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223FC662104BCE700D8E317 /* ViewController_ContainerHamburger.swift */; };
 		2227627F20E49BF00043320A /* ViewController_MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227627D20E49BF00043320A /* ViewController_MainMenu.swift */; };
 		2227628020E49BF00043320A /* ViewController_Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227627E20E49BF00043320A /* ViewController_Map.swift */; };
@@ -61,7 +60,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2223FC5E21047FC200D8E317 /* ViewController_ContainerMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_ContainerMap.swift; sourceTree = "<group>"; };
 		2223FC662104BCE700D8E317 /* ViewController_ContainerHamburger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_ContainerHamburger.swift; sourceTree = "<group>"; };
 		2227627D20E49BF00043320A /* ViewController_MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_MainMenu.swift; sourceTree = "<group>"; };
 		2227627E20E49BF00043320A /* ViewController_Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Map.swift; sourceTree = "<group>"; };
@@ -132,9 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				2227627E20E49BF00043320A /* ViewController_Map.swift */,
-				2223FC5E21047FC200D8E317 /* ViewController_ContainerMap.swift */,
-				22365A8120FA301300B20B37 /* ViewController_Directions.swift */,
 				2223FC662104BCE700D8E317 /* ViewController_ContainerHamburger.swift */,
+				22365A8120FA301300B20B37 /* ViewController_Directions.swift */,
 				2254B8562121B7C1007047CB /* ViewController_ExtraDetail.swift */,
 			);
 			path = Map;
@@ -407,7 +404,6 @@
 				22FDC0A920E2798F00258319 /* AppDelegate.swift in Sources */,
 				227A5DC120F0EECC00E59520 /* Attraction.swift in Sources */,
 				227A5DC820F0F89900E59520 /* AttractionMarkerView.swift in Sources */,
-				2223FC5F21047FC200D8E317 /* ViewController_ContainerMap.swift in Sources */,
 				22F895AE2112BCAA00DC8E38 /* NetworkTester.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

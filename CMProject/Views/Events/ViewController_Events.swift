@@ -64,6 +64,8 @@ class ViewController_Events: UIViewController, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! EventCell
+        cell.layer.cornerRadius = 8.0
+        
         let cellContents = arrayEvents[indexPath.item] as! [String: String]
         
         cell.eventTitle.text = cellContents["Title"]

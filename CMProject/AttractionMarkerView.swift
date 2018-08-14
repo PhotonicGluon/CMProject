@@ -12,11 +12,20 @@ import MapKit
 
 let ATTRACTION_IMAGE_SIZE = 64
 let ATTRACTION_DETAIL_FONT_SIZE = 10
+let DETAIL_WIDTH = 250
+let DETAIL_HEIGHT = 100
 
 class AttractionMarkerView: MKMarkerAnnotationView {  // The things that will be shown when the attraction pin is tapped
+    var detailData: NSDictionary = [:]
+    var destData: NSDictionary = [:]
+    
     override var annotation: MKAnnotation? {
         willSet {
             guard let attraction = newValue as? Attraction else { return }
+            // Make data
+            detailData = ["title": attraction.title!, "detail": attraction.locationDetail, "credit": attraction.imageCredit]
+            destData = ["title": attraction.title!]
+            
             // Misc
             canShowCallout = true
             calloutOffset = CGPoint(x: -5, y: 5)
@@ -46,19 +55,56 @@ class AttractionMarkerView: MKMarkerAnnotationView {  // The things that will be
                 glyphText = String(attraction.locationType.first!)
             }
             
-            // Detail label
-            let detailLabel = UILabel()
+            // Detail callout
+            let snapshotView = UIView()
+            let views = ["snapshotView": snapshotView]
+            snapshotView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[snapshotView(\(DETAIL_WIDTH))]", options: [], metrics: nil, views: views))
+            snapshotView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[snapshotView(\(DETAIL_HEIGHT))]", options: [], metrics: nil, views: views))
+            
+            // Configure More Info
+            let detailsButton = UIButton(frame: CGRect(x: 0, y: DETAIL_HEIGHT - 35, width: DETAIL_WIDTH / 2 - 5, height: 35))
+            detailsButton.setTitle("More Info", for: .normal)
+            detailsButton.backgroundColor = UIColor.darkGray
+            detailsButton.layer.cornerRadius = 5
+            detailsButton.layer.borderWidth = 1
+            detailsButton.layer.borderColor = UIColor.black.cgColor
+            detailsButton.addTarget(self, action: #selector(self.moveToDetail), for: .touchDown)
+            
+            // Configure Directions
+            let directionsButton = UIButton(frame: CGRect(x: DETAIL_WIDTH / 2 + 5, y: DETAIL_HEIGHT - 35, width: DETAIL_WIDTH / 2, height: 35))
+            directionsButton.setTitle("Directions", for: .normal)
+            directionsButton.backgroundColor = UIColor.darkGray
+            directionsButton.layer.cornerRadius = 5
+            directionsButton.layer.borderWidth = 1
+            directionsButton.layer.borderColor = UIColor.black.cgColor
+            directionsButton.addTarget(self, action: #selector(self.moveToDirections), for: .touchDown)
+            
+            // Configure detail label
+            let detailLabel = UILabel(frame: CGRect(x: 0, y: 0, width: DETAIL_WIDTH, height: DETAIL_HEIGHT - 40))
             detailLabel.numberOfLines = 0
             
             let formattedText = attraction.subtitle!.replacingOccurrences(of: "\\n", with: "\n")  // Correctly format text with linebreaks
             
             detailLabel.text = formattedText
             detailLabel.font = detailLabel.font.withSize(CGFloat(ATTRACTION_DETAIL_FONT_SIZE))
-            detailCalloutAccessoryView = detailLabel
             
-            // More details button
-            let mapsButton = UIButton(type: .detailDisclosure)
-            rightCalloutAccessoryView = mapsButton
+            // Adding items to view
+            snapshotView.addSubview(detailLabel)
+            snapshotView.addSubview(detailsButton)
+            snapshotView.addSubview(directionsButton)
+            
+            // Set accessory
+            detailCalloutAccessoryView = snapshotView
         }
+    }
+    // Listener functions
+    @objc func moveToDetail()
+    {
+        NotificationCenter.default.post(name: NSNotification.Name("MoveToDetail"), object: nil, userInfo: detailData as? [String : Any])
+    }
+    
+    @objc func moveToDirections()
+    {
+        NotificationCenter.default.post(name: NSNotification.Name("MoveToDirections"), object: nil, userInfo: destData as? [String : Any])
     }
 }
