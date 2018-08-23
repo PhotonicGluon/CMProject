@@ -19,6 +19,7 @@ class ViewController_Directions: UIViewController {  // Subview of maps
     @IBOutlet weak var label_directions: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var segmentControl_modeOfTransport: UISegmentedControl!
+    @IBOutlet weak var label_estTime: UILabel!  // Estimated time remaining
     
     // MARK: Vars
     let locationManager = CLLocationManager()
@@ -66,7 +67,6 @@ class ViewController_Directions: UIViewController {  // Subview of maps
             directionsRequest.transportType = .automobile
         }
         
-        
         // Calculate directions
         print("Calculate directions")
         let directions = MKDirections(request: directionsRequest)
@@ -107,9 +107,16 @@ class ViewController_Directions: UIViewController {  // Subview of maps
                 self.mapView.addOverlay(circle)
             }
             
-            // UPDATE MESSAGE
+            // UPDATE MESSAGES
             let initialMessage = "In \(self.steps[0].distance) meters, \(self.steps[0].instructions). Then in \(self.steps[1].distance) meters, \(self.steps[1].instructions)."
+            let estTime = Double(round(100 * primaryRoute.expectedTravelTime / 60)/100)  // Round to 3dp
+            
             self.label_directions.text = initialMessage  // Let the message be parsed first before setting it to be the label's text
+            self.label_estTime.text = "\(estTime) Minutes Remaining"  // Display estimated time
+            
+            self.label_directions.layer.cornerRadius = 8.0
+            self.label_estTime.layer.cornerRadius = 8.0
+            
             let speechUtterance = AVSpeechUtterance(string: initialMessage)  // Make the phone speak
             self.speechSynthesizer.speak(speechUtterance)
             self.stepCounter += 1
@@ -121,6 +128,10 @@ class ViewController_Directions: UIViewController {  // Subview of maps
     override func viewDidLoad() {
         print()
         print("LOADING 'DIRECTIONS' SUBVIEW")
+        
+        // Decorations
+        label_directions.layer.cornerRadius = 8.0
+        label_estTime.layer.cornerRadius = 8.0
         
         self.title = "Directions"
         
@@ -137,9 +148,6 @@ class ViewController_Directions: UIViewController {  // Subview of maps
             print("Cannot reach directional servers.")
             self.label_directions.text = "Direction assistant offline. Please refresh after enabling internet access to continue."
         } else {
-            // Decorations
-            label_directions.layer.cornerRadius = 8.0
-            
             let localSearchRequest = MKLocalSearch.Request()
             localSearchRequest.naturalLanguageQuery = locationTitle
             print("Search query recieved")
@@ -157,7 +165,6 @@ class ViewController_Directions: UIViewController {  // Subview of maps
                     guard let firstMapItem = response.mapItems.first else { return }
                     
                     self.requestedLocation = firstMapItem
-                    
                     self.getDirections(to: firstMapItem)
             }
         }

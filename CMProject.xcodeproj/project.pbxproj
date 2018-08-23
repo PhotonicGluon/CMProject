@@ -57,6 +57,7 @@
 		229222382125351C004E7103 /* National Day.png in Resources */ = {isa = PBXBuildFile; fileRef = 229222302125351C004E7103 /* National Day.png */; };
 		229222392125351C004E7103 /* Hari Raya Haji.png in Resources */ = {isa = PBXBuildFile; fileRef = 229222312125351C004E7103 /* Hari Raya Haji.png */; };
 		2292223A2125351C004E7103 /* Singapore Art Week.png in Resources */ = {isa = PBXBuildFile; fileRef = 229222322125351C004E7103 /* Singapore Art Week.png */; };
+		22D5C67B212E6EAF00B65725 /* CMProject-LoadingScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 22D5C67A212E6EAE00B65725 /* CMProject-LoadingScreen.png */; };
 		22F895A92112BB2D00DC8E38 /* Cathedral Of The Good Shepherd.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F895A72112BB2D00DC8E38 /* Cathedral Of The Good Shepherd.png */; };
 		22F895AC2112BB4200DC8E38 /* Helix Bridge.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F895AB2112BB4200DC8E38 /* Helix Bridge.png */; };
 		22F895AE2112BCAA00DC8E38 /* NetworkTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F895AD2112BCAA00DC8E38 /* NetworkTester.swift */; };
@@ -117,6 +118,7 @@
 		229222302125351C004E7103 /* National Day.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "National Day.png"; sourceTree = "<group>"; };
 		229222312125351C004E7103 /* Hari Raya Haji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hari Raya Haji.png"; sourceTree = "<group>"; };
 		229222322125351C004E7103 /* Singapore Art Week.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Singapore Art Week.png"; sourceTree = "<group>"; };
+		22D5C67A212E6EAE00B65725 /* CMProject-LoadingScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CMProject-LoadingScreen.png"; sourceTree = "<group>"; };
 		22F895A72112BB2D00DC8E38 /* Cathedral Of The Good Shepherd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cathedral Of The Good Shepherd.png"; sourceTree = "<group>"; };
 		22F895AB2112BB4200DC8E38 /* Helix Bridge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Helix Bridge.png"; sourceTree = "<group>"; };
 		22F895AD2112BCAA00DC8E38 /* NetworkTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTester.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		222765852123158700C52CCF /* MiscImages */ = {
 			isa = PBXGroup;
 			children = (
+				22D5C67A212E6EAE00B65725 /* CMProject-LoadingScreen.png */,
 				2249E51020F1D037006A94B2 /* CMProject-NoImageDetected.png */,
 				223B1F8320F0A7B400791DEE /* CMProject-Icon.png */,
 				223B1F8220F0A7B300791DEE /* CMProject-MainBG.png */,
@@ -414,6 +417,7 @@
 				229222362125351C004E7103 /* Formula One.png in Resources */,
 				22FDC0B020E2799200258319 /* Assets.xcassets in Resources */,
 				228B4C1720F48D6000EF0661 /* SGTouristEvents.txt in Resources */,
+				22D5C67B212E6EAF00B65725 /* CMProject-LoadingScreen.png in Resources */,
 				2289078F2111EBCA00BFD127 /* Gardens By The Bay.png in Resources */,
 				2249E51120F1D037006A94B2 /* CMProject-NoImageDetected.png in Resources */,
 				2292223A2125351C004E7103 /* Singapore Art Week.png in Resources */,
