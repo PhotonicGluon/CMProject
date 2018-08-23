@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2223FC672104BCE700D8E317 /* ViewController_ContainerHamburger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2223FC662104BCE700D8E317 /* ViewController_ContainerHamburger.swift */; };
 		2227627F20E49BF00043320A /* ViewController_MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227627D20E49BF00043320A /* ViewController_MainMenu.swift */; };
 		2227628020E49BF00043320A /* ViewController_Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227627E20E49BF00043320A /* ViewController_Map.swift */; };
 		22365A8220FA301300B20B37 /* ViewController_Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22365A8120FA301300B20B37 /* ViewController_Directions.swift */; };
@@ -50,6 +49,14 @@
 		228B4C1720F48D6000EF0661 /* SGTouristEvents.txt in Resources */ = {isa = PBXBuildFile; fileRef = 228B4C1620F48D6000EF0661 /* SGTouristEvents.txt */; };
 		228B4C2A20F4EB8100EF0661 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B4C2920F4EB8100EF0661 /* EventCell.swift */; };
 		228B4C2C20F4EC4600EF0661 /* ViewController_Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B4C2B20F4EC4600EF0661 /* ViewController_Events.swift */; };
+		229222332125351C004E7103 /* Singapore Airshow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2292222B2125351A004E7103 /* Singapore Airshow.png */; };
+		229222342125351C004E7103 /* Mid Autumn Festival.png in Resources */ = {isa = PBXBuildFile; fileRef = 2292222C2125351B004E7103 /* Mid Autumn Festival.png */; };
+		229222352125351C004E7103 /* Hungry Ghost Festival.png in Resources */ = {isa = PBXBuildFile; fileRef = 2292222D2125351B004E7103 /* Hungry Ghost Festival.png */; };
+		229222362125351C004E7103 /* Formula One.png in Resources */ = {isa = PBXBuildFile; fileRef = 2292222E2125351B004E7103 /* Formula One.png */; };
+		229222372125351C004E7103 /* Singapore Food Festival.png in Resources */ = {isa = PBXBuildFile; fileRef = 2292222F2125351C004E7103 /* Singapore Food Festival.png */; };
+		229222382125351C004E7103 /* National Day.png in Resources */ = {isa = PBXBuildFile; fileRef = 229222302125351C004E7103 /* National Day.png */; };
+		229222392125351C004E7103 /* Hari Raya Haji.png in Resources */ = {isa = PBXBuildFile; fileRef = 229222312125351C004E7103 /* Hari Raya Haji.png */; };
+		2292223A2125351C004E7103 /* Singapore Art Week.png in Resources */ = {isa = PBXBuildFile; fileRef = 229222322125351C004E7103 /* Singapore Art Week.png */; };
 		22F895A92112BB2D00DC8E38 /* Cathedral Of The Good Shepherd.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F895A72112BB2D00DC8E38 /* Cathedral Of The Good Shepherd.png */; };
 		22F895AC2112BB4200DC8E38 /* Helix Bridge.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F895AB2112BB4200DC8E38 /* Helix Bridge.png */; };
 		22F895AE2112BCAA00DC8E38 /* NetworkTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F895AD2112BCAA00DC8E38 /* NetworkTester.swift */; };
@@ -60,7 +67,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2223FC662104BCE700D8E317 /* ViewController_ContainerHamburger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_ContainerHamburger.swift; sourceTree = "<group>"; };
 		2227627D20E49BF00043320A /* ViewController_MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_MainMenu.swift; sourceTree = "<group>"; };
 		2227627E20E49BF00043320A /* ViewController_Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Map.swift; sourceTree = "<group>"; };
 		22365A8120FA301300B20B37 /* ViewController_Directions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Directions.swift; sourceTree = "<group>"; };
@@ -103,6 +109,14 @@
 		228B4C1620F48D6000EF0661 /* SGTouristEvents.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SGTouristEvents.txt; sourceTree = "<group>"; };
 		228B4C2920F4EB8100EF0661 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		228B4C2B20F4EC4600EF0661 /* ViewController_Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Events.swift; sourceTree = "<group>"; };
+		2292222B2125351A004E7103 /* Singapore Airshow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Singapore Airshow.png"; sourceTree = "<group>"; };
+		2292222C2125351B004E7103 /* Mid Autumn Festival.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mid Autumn Festival.png"; sourceTree = "<group>"; };
+		2292222D2125351B004E7103 /* Hungry Ghost Festival.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hungry Ghost Festival.png"; sourceTree = "<group>"; };
+		2292222E2125351B004E7103 /* Formula One.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Formula One.png"; sourceTree = "<group>"; };
+		2292222F2125351C004E7103 /* Singapore Food Festival.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Singapore Food Festival.png"; sourceTree = "<group>"; };
+		229222302125351C004E7103 /* National Day.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "National Day.png"; sourceTree = "<group>"; };
+		229222312125351C004E7103 /* Hari Raya Haji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hari Raya Haji.png"; sourceTree = "<group>"; };
+		229222322125351C004E7103 /* Singapore Art Week.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Singapore Art Week.png"; sourceTree = "<group>"; };
 		22F895A72112BB2D00DC8E38 /* Cathedral Of The Good Shepherd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cathedral Of The Good Shepherd.png"; sourceTree = "<group>"; };
 		22F895AB2112BB4200DC8E38 /* Helix Bridge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Helix Bridge.png"; sourceTree = "<group>"; };
 		22F895AD2112BCAA00DC8E38 /* NetworkTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTester.swift; sourceTree = "<group>"; };
@@ -130,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				2227627E20E49BF00043320A /* ViewController_Map.swift */,
-				2223FC662104BCE700D8E317 /* ViewController_ContainerHamburger.swift */,
 				22365A8120FA301300B20B37 /* ViewController_Directions.swift */,
 				2254B8562121B7C1007047CB /* ViewController_ExtraDetail.swift */,
 			);
@@ -202,6 +215,7 @@
 		223B1F8120F0A79000791DEE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2251C85C2123B4D900EF317D /* EventImages */,
 				222765852123158700C52CCF /* MiscImages */,
 				22F0BA9E21113A4800E9A1AE /* AttractionImages */,
 			);
@@ -214,6 +228,21 @@
 				223B1F8A20F0AB5900791DEE /* Singapore, Singapore.gpx */,
 			);
 			path = GPXs;
+			sourceTree = "<group>";
+		};
+		2251C85C2123B4D900EF317D /* EventImages */ = {
+			isa = PBXGroup;
+			children = (
+				2292222E2125351B004E7103 /* Formula One.png */,
+				229222312125351C004E7103 /* Hari Raya Haji.png */,
+				2292222D2125351B004E7103 /* Hungry Ghost Festival.png */,
+				2292222C2125351B004E7103 /* Mid Autumn Festival.png */,
+				229222302125351C004E7103 /* National Day.png */,
+				2292222B2125351A004E7103 /* Singapore Airshow.png */,
+				229222322125351C004E7103 /* Singapore Art Week.png */,
+				2292222F2125351C004E7103 /* Singapore Food Festival.png */,
+			);
+			path = EventImages;
 			sourceTree = "<group>";
 		};
 		22F0BA9E21113A4800E9A1AE /* AttractionImages */ = {
@@ -320,6 +349,7 @@
 				TargetAttributes = {
 					22FDC0A420E2798F00258319 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -365,24 +395,32 @@
 				228907752111EBCA00BFD127 /* Fort Canning Park.png in Resources */,
 				228907852111EBCA00BFD127 /* Merlion.png in Resources */,
 				228907772111EBCA00BFD127 /* Esplanade Theatre.png in Resources */,
+				229222352125351C004E7103 /* Hungry Ghost Festival.png in Resources */,
 				228907782111EBCA00BFD127 /* Singapore Zoo.png in Resources */,
 				228907892111EBCA00BFD127 /* Clake Quay.png in Resources */,
 				2289078D2111EBCA00BFD127 /* Sentosa.png in Resources */,
 				2249E50F20F1CA66006A94B2 /* SGTouristLoc.txt in Resources */,
 				228907822111EBCA00BFD127 /* Fountain of Wealth.png in Resources */,
+				229222372125351C004E7103 /* Singapore Food Festival.png in Resources */,
 				223B1F8420F0A7B400791DEE /* CMProject-MainBG.png in Resources */,
+				229222342125351C004E7103 /* Mid Autumn Festival.png in Resources */,
 				228907872111EBCA00BFD127 /* Sungei Buloh.png in Resources */,
 				228907812111EBCA00BFD127 /* Mount Faber.png in Resources */,
 				223B1F8B20F0AB5900791DEE /* Singapore, Singapore.gpx in Resources */,
 				223B1F8520F0A7B400791DEE /* CMProject-Icon.png in Resources */,
 				228907802111EBCA00BFD127 /* Chinatown.png in Resources */,
 				2289077A2111EBCA00BFD127 /* Statue of Sir Stamford Raffles.png in Resources */,
+				229222392125351C004E7103 /* Hari Raya Haji.png in Resources */,
+				229222362125351C004E7103 /* Formula One.png in Resources */,
 				22FDC0B020E2799200258319 /* Assets.xcassets in Resources */,
 				228B4C1720F48D6000EF0661 /* SGTouristEvents.txt in Resources */,
 				2289078F2111EBCA00BFD127 /* Gardens By The Bay.png in Resources */,
 				2249E51120F1D037006A94B2 /* CMProject-NoImageDetected.png in Resources */,
+				2292223A2125351C004E7103 /* Singapore Art Week.png in Resources */,
 				228907762111EBCA00BFD127 /* Universal Studios Singapore.png in Resources */,
 				22F895AC2112BB4200DC8E38 /* Helix Bridge.png in Resources */,
+				229222332125351C004E7103 /* Singapore Airshow.png in Resources */,
+				229222382125351C004E7103 /* National Day.png in Resources */,
 				228907792111EBCA00BFD127 /* Marina Barage.png in Resources */,
 				22FDC0AE20E2798F00258319 /* Main.storyboard in Resources */,
 				2289078A2111EBCA00BFD127 /* Singapore Flyer.png in Resources */,
@@ -404,7 +442,6 @@
 				2227627F20E49BF00043320A /* ViewController_MainMenu.swift in Sources */,
 				228B4C2C20F4EC4600EF0661 /* ViewController_Events.swift in Sources */,
 				22365A8220FA301300B20B37 /* ViewController_Directions.swift in Sources */,
-				2223FC672104BCE700D8E317 /* ViewController_ContainerHamburger.swift in Sources */,
 				227727D920E7992E00210BD9 /* ViewController_Credits.swift in Sources */,
 				2254B8572121B7C1007047CB /* ViewController_ExtraDetail.swift in Sources */,
 				2227628020E49BF00043320A /* ViewController_Map.swift in Sources */,
@@ -556,7 +593,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CMProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -564,7 +603,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kanonnkit.CMProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -573,7 +613,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CMProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -581,7 +623,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kanonnkit.CMProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

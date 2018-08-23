@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>TravelGuideSG</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -26,7 +28,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>0.91</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -40,9 +42,9 @@
 		<string>MKDirectionsModeTaxi</string>
 		<string>MKDirectionsModeTrain</string>
 	</array>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We won&apos;t reveal your location, we promise!</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We won&apos;t reveal your location, we promise!</string>
+	<key>NSLocationAlwaysUsageDescription</key>
 	<string>We won&apos;t reveal your location, we promise!</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We won&apos;t reveal your location, we promise!</string>
@@ -71,5 +73,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
+	<key>UISupportsDocumentBrowser</key>
+	<true/>
 </dict>
 </plist>

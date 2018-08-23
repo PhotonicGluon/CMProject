@@ -42,6 +42,7 @@ class ViewController_Events: UIViewController, UICollectionViewDataSource, UICol
                 dictEvents["Title"] = "\(eventData[0])"
                 dictEvents["Event_Type"] = "\(eventData[1])"
                 dictEvents["Event_Date"] = "\(eventData[2])"
+                dictEvents["Event_Credits"] = "\(eventData[3])"  // Credits for the image
                 
                 arrayEvents.add(dictEvents)
             }
@@ -69,6 +70,7 @@ class ViewController_Events: UIViewController, UICollectionViewDataSource, UICol
         let cellContents = arrayEvents[indexPath.item] as! [String: String]
         
         cell.eventTitle.text = cellContents["Title"]
+        cell.eventCredits.text = "Image by \(cellContents["Event_Credits"]!)"
         cell.eventType.text = cellContents["Event_Type"]
         cell.eventDate.text = cellContents["Event_Date"]
         cell.eventImage.image = UIImage(named: cellContents["Title"]!)

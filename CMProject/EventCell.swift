@@ -13,4 +13,6 @@ class EventCell: UICollectionViewCell {  // For each event
     @IBOutlet weak var eventType: UILabel!
     @IBOutlet weak var eventDate: UILabel!
     @IBOutlet weak var eventImage: UIImageView!
+    @IBOutlet weak var eventCredits: UILabel!
+    
 }
