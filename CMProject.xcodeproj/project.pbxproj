@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221C6C20213626720071C70F /* Science Centre.png in Resources */ = {isa = PBXBuildFile; fileRef = 221C6C1F213626720071C70F /* Science Centre.png */; };
 		2227627F20E49BF00043320A /* ViewController_MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227627D20E49BF00043320A /* ViewController_MainMenu.swift */; };
 		2227628020E49BF00043320A /* ViewController_Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227627E20E49BF00043320A /* ViewController_Map.swift */; };
 		22365A8220FA301300B20B37 /* ViewController_Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22365A8120FA301300B20B37 /* ViewController_Directions.swift */; };
@@ -68,6 +69,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		221C6C1F213626720071C70F /* Science Centre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Science Centre.png"; sourceTree = "<group>"; };
 		2227627D20E49BF00043320A /* ViewController_MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_MainMenu.swift; sourceTree = "<group>"; };
 		2227627E20E49BF00043320A /* ViewController_Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Map.swift; sourceTree = "<group>"; };
 		22365A8120FA301300B20B37 /* ViewController_Directions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Directions.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 		22F0BA9E21113A4800E9A1AE /* AttractionImages */ = {
 			isa = PBXGroup;
 			children = (
+				221C6C1F213626720071C70F /* Science Centre.png */,
 				228907622111EBC800BFD127 /* Botanical Gardens.png */,
 				22F895A72112BB2D00DC8E38 /* Cathedral Of The Good Shepherd.png */,
 				228907642111EBC800BFD127 /* Chinatown.png */,
@@ -399,6 +402,7 @@
 				228907852111EBCA00BFD127 /* Merlion.png in Resources */,
 				228907772111EBCA00BFD127 /* Esplanade Theatre.png in Resources */,
 				229222352125351C004E7103 /* Hungry Ghost Festival.png in Resources */,
+				221C6C20213626720071C70F /* Science Centre.png in Resources */,
 				228907782111EBCA00BFD127 /* Singapore Zoo.png in Resources */,
 				228907892111EBCA00BFD127 /* Clake Quay.png in Resources */,
 				2289078D2111EBCA00BFD127 /* Sentosa.png in Resources */,
