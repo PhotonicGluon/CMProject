@@ -366,7 +366,7 @@
                                     <constraint firstAttribute="height" constant="223" id="sjr-pk-iAl"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZHi-Kl-Oa1">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHi-Kl-Oa1">
                                 <rect key="frame" x="20" y="349.66666666666674" width="374" height="366.33333333333326"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -417,14 +417,15 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSQ-Ld-xiQ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSQ-Ld-xiQ">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="A0Y-PN-BNS"/>
                                     <constraint firstAttribute="height" constant="672" id="Rb1-fV-fst"/>
                                 </constraints>
-                                <string key="text">Main Menu Image by Pintrest (HandLuggageOnly) - https://bit.ly/2lU0tVO  Location Data retreved from Wikipedia: https://en.wikipedia.org/wiki/Main_Page  Location images: Botanical Gardens by Cathedral Of The Good Shepherd by Chinatown by Clarke Quay by Downtown East by Esplanade Theatre by Fort Canning Park by Fountain of Wealth by Gardens By The Bay by Har Paw Villa by Harbourfront by Helix Bridge by Jurong bird Park by Malay Heritage Centre by Marina Barrage by Marina Bay Sands by Merlion by Mount Faber by Orchard Road by River Safary by Sentosa by Singapore Art Museum by Singapore Flyer by Singapore River by Singapore Zoo by Statue of Sir Stamford Raffles by Sungei Buloh by Universal Studios Singapore by </string>
+                                <mutableString key="text">Background Images by Pintrest (HandLuggageOnly) - https://bit.ly/2lU0tVO  Sample Location Data retreved from Wikipedia: https://en.wikipedia.org/wiki/Main_Page  Location images have been credited within their respective "Detailed" views.  The Development Team: - Aidan - Alson - Onn Kit - Zachary - Zaky
+ </mutableString>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
