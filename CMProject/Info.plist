@@ -4,8 +4,6 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>CFBundleDisplayName</key>
-	<string>TravelGuideSG</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -27,9 +25,11 @@
 	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
-	<true/>
-	<key>LSSupportsOpeningDocumentsInPlace</key>
 	<true/>
 	<key>MKDirectionsApplicationSupportedModes</key>
 	<array>
@@ -40,12 +40,12 @@
 		<string>MKDirectionsModeTaxi</string>
 		<string>MKDirectionsModeTrain</string>
 	</array>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>We won't reveal your location, we promise!</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We won't reveal your location, we promise!</string>
+	<string>We won&apos;t reveal your location, we promise!</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We won&apos;t reveal your location, we promise!</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We won't reveal your location, we promise!</string>
+	<string>We won&apos;t reveal your location, we promise!</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
@@ -71,7 +71,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UISupportsDocumentBrowser</key>
-	<true/>
 </dict>
 </plist>
