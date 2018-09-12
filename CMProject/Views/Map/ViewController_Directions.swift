@@ -27,7 +27,7 @@ class ViewController_Directions: UIViewController {  // Subview of maps
     
     var segmentIndex: Int = 0
     
-    var steps = [MKRoute.Step]()
+    var steps = [MKRouteStep]()
     let speechSynthesizer = AVSpeechSynthesizer()  // Speaker
     
     var stepCounter = 0
@@ -53,7 +53,7 @@ class ViewController_Directions: UIViewController {  // Subview of maps
         let sourcePlacemark = MKPlacemark(coordinate: currentCoordinate)
         let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
         
-        let directionsRequest = MKDirections.Request()
+        let directionsRequest = MKDirectionsRequest()
         directionsRequest.source = sourceMapItem
         directionsRequest.destination = destination
         
@@ -90,7 +90,7 @@ class ViewController_Directions: UIViewController {  // Subview of maps
                 
             }
             print("Adding primary route")
-            self.mapView.addOverlay(primaryRoute.polyline)
+            self.mapView.add(primaryRoute.polyline)
             
             self.locationManager.monitoredRegions.forEach({ self.locationManager.stopMonitoring(for: $0) })
             
@@ -104,7 +104,7 @@ class ViewController_Directions: UIViewController {  // Subview of maps
                                               identifier: "\(i)")
                 self.locationManager.startMonitoring(for: region)
                 let circle = MKCircle(center: region.center, radius: region.radius)
-                self.mapView.addOverlay(circle)
+                self.mapView.add(circle)
             }
             
             // UPDATE MESSAGES
@@ -148,7 +148,7 @@ class ViewController_Directions: UIViewController {  // Subview of maps
             print("Cannot reach directional servers.")
             self.label_directions.text = "Direction assistant offline. Please refresh after enabling internet access to continue."
         } else {
-            let localSearchRequest = MKLocalSearch.Request()
+            let localSearchRequest = MKLocalSearchRequest()
             localSearchRequest.naturalLanguageQuery = locationTitle
             print("Search query recieved")
             

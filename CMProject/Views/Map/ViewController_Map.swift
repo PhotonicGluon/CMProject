@@ -26,8 +26,7 @@ class ViewController_Map: UIViewController, MKMapViewDelegate {
     // MARK: Func
     func centerMapOnLocation(location: CLLocation)
     {
-        let coordinateRegion = MKCoordinateRegion.init(center: location.coordinate,
-                                                                  latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius, regionRadius)
         mapKitView.setRegion(coordinateRegion, animated: true)
     }
     
@@ -150,7 +149,8 @@ extension UIViewController {   // Create a spinning loading wheel
     class func displaySpinner(onView : UIView) -> UIView {
         let spinnerView = UIView.init(frame: onView.bounds)
         spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)  // Grey
-        let ai = UIActivityIndicatorView.init(style: .whiteLarge)
+//        let ai = UIActivityIndicatorView.init(style: .whiteLarge)
+        let ai = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
         ai.startAnimating()
         ai.center = spinnerView.center
         
